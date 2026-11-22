@@ -3,179 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101b1b">
-<!-- Add your phone number, optional email and UPI ID or upi://pay link here when ready. Put your ₹149 QR image beside this file and enter its filename below. -->
+<meta name="theme-color" content="#1735d7">
+<!-- Shared defaults. Keep these unless your business details change. -->
 <meta name="hcompany-phone" content="+919535194779">
 <meta name="hcompany-email" content="masalaoats69@gmail.com">
 <meta name="hcompany-upi" content="masalaoats69@axl">
 <meta name="hcompany-upi-qr" content="qr.png">
-<meta name="description" content="H Company provides fabrication and welding, electrical services, and technology support for homes and businesses.">
-<!-- After changing inline CSS or JavaScript, run python3 update-csp.py to refresh the policy. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://images.unsplash.com; style-src 'sha256-oyHOlkrSfHuCZ0FFXbljFO3rHiEWfe4iC+AQHFDz3Ec='; script-src 'sha256-81QM8O5WE6CDy5ez7wRlYHsJ6xwO+nFBIHWDu4o9vGk=' 'sha256-JuZxc0Ld+z97U7lb/sIaq3Xh+Fmdw0+Dh/BQQPEnT/s='; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<!-- Per-service overrides: phone is independent; set UPI and QR together for the same recipient. -->
+<meta name="hcompany-fab-phone" content="">
+<meta name="hcompany-fab-upi" content="">
+<meta name="hcompany-fab-qr" content="">
+<meta name="hcompany-elec-phone" content="">
+<meta name="hcompany-elec-upi" content="">
+<meta name="hcompany-elec-qr" content="">
+<meta name="hcompany-tech-phone" content="">
+<meta name="hcompany-tech-upi" content="">
+<meta name="hcompany-tech-qr" content="">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self' 'sha256-81QM8O5WE6CDy5ez7wRlYHsJ6xwO+nFBIHWDu4o9vGk='; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="Enquire with H Company about metal fabrication, electrical work and supplies, and computer and technology support.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="H Company | Fabrication, Electrical &amp; Technology Services">
-<meta property="og:description" content="Explore fabrication and welding, electrical work, and technology solutions from H Company.">
-<title>H Company | Fabrication, Electrical &amp; Technology Services</title>
+<meta property="og:title" content="H Company | Fabrication, Electrical &amp; Technology">
+<meta property="og:description" content="Find the right team for metalwork, electrical services and supplies, or technology support.">
+<title>H Company | Fabrication, Electrical &amp; Technology</title>
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"H Company","description":"Fabrication and welding, electrical services, and technology solutions."}
 </script>
-<style>
-:root{--ink:#17312d;--muted:#52665f;--paper:#f8f7f1;--card:#fff;--brand:#143d36;--accent:#efad6b;--line:#dde5dc;--green:#287055;--shadow:0 20px 55px rgba(20,45,40,.07)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-a{color:inherit}button,input{font:inherit}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #e58a3a;outline-offset:3px}
-.wrap{width:min(1240px,calc(100% - 64px));margin:auto}
-header{background:rgba(248,247,241,.96);color:var(--ink);position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(20,61,54,.09);backdrop-filter:blur(12px)}
-.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:.09em;font-size:.95rem;white-space:nowrap}
-.mark{width:43px;height:43px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;font-size:1.5rem;letter-spacing:0}
-.nav-right{display:flex;align-items:center;gap:28px}.nav-link{text-decoration:none;font-size:.85rem;font-weight:750}.nav-link:hover{text-decoration:underline}
-.langs{display:flex;align-items:center;gap:4px;background:#e9eee7;border-radius:999px;padding:4px}.langs button{border:0;background:transparent;color:#3b5750;border-radius:999px;min-height:36px;padding:7px 12px;cursor:pointer;font-weight:700;font-size:.78rem}
-.langs button[aria-pressed=true]{background:#fff;color:var(--brand);box-shadow:0 2px 7px rgba(20,45,40,.1)}
-.hero{padding:30px 0 0}.hero-inner{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:#143d36;border-radius:10px;overflow:hidden}
-.hero-copy{padding:clamp(40px,6vw,82px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;color:#fff}
-.eyebrow{color:var(--green);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.73rem}
-.hero .eyebrow{color:#bbd4c3;display:flex;align-items:center;gap:10px}.hero .eyebrow:before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.1rem,5.4vw,5.4rem);font-weight:500;line-height:1.02;letter-spacing:-.045em;margin:23px 0;white-space:pre-line}
-.hero p{font-size:1.02rem;color:#d1e1d7;max-width:470px;margin:0;line-height:1.7}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.hero-actions .btn{padding:14px 21px}.hero-primary{background:var(--accent);color:#24352d}.hero-secondary{border:1px solid rgba(255,255,255,.42)!important;color:white;background:transparent}
-.hero-visual{position:relative;min-height:420px;background:#283d35;overflow:hidden}.hero-visual img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(9,33,28,.68))}
-.hero-caption{position:absolute;z-index:1;left:32px;right:32px;bottom:30px;display:flex;align-items:end;justify-content:space-between;gap:20px;color:#fff}.hero-caption p{font-family:Georgia,serif;font-size:1.5rem;line-height:1.25;color:#fff;max-width:285px}.hero-caption span{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;font-weight:800;color:#e3eee5;white-space:nowrap}
-.service-strip{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 4px;border-bottom:1px solid #dce3da;color:#62756d;font-size:.75rem;letter-spacing:.11em;text-transform:uppercase;font-weight:800}.service-strip span:last-child{color:var(--brand)}
-.section{padding:95px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
-h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2.3rem,4vw,3.5rem);line-height:1.05;letter-spacing:-.035em;margin:10px 0 0}
-.section-head p{margin:0;color:var(--muted);max-width:390px}
-.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.service{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
-.photo{height:240px;position:relative;overflow:hidden;background:#d9e1db}.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.service:hover .photo img{transform:scale(1.045)}
-.number{position:absolute;left:16px;top:16px;background:#fff;color:var(--brand);border-radius:5px;padding:7px 10px;font-size:.72rem;font-weight:850;letter-spacing:.08em}
-.service-body{padding:25px;display:flex;flex-direction:column;flex:1}.service h3{font-size:1.3rem;line-height:1.2;margin:0 0 12px;letter-spacing:-.025em}.service p{color:var(--muted);margin:0 0 24px;flex:1;font-size:.92rem;line-height:1.65}
-.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.btn{min-height:48px;border:0;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;font-weight:800;font-size:.86rem;cursor:pointer;overflow-wrap:anywhere;padding:11px 12px;transition:transform .15s,filter .15s}.btn[aria-disabled=true],.btn:disabled{opacity:.65;cursor:not-allowed}.btn:active{transform:scale(.98)}.btn:hover{filter:brightness(.96)}.btn-call{background:#edf3ed;color:#286247}.btn-book{background:var(--brand);color:white}
-.charge-note{flex:0!important;color:var(--muted);font-size:.75rem!important;font-weight:700;margin:14px 0 0!important}
-.process{padding:0 0 95px}.process-inner{background:#e8eee5;border-radius:8px;padding:clamp(30px,5vw,60px);display:grid;grid-template-columns:.8fr 1.4fr;gap:50px;align-items:start}.process-inner h2{max-width:300px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.step-number{font-family:Georgia,serif;font-size:1.7rem;color:#865733}.step h3{font-size:1rem;margin:12px 0 8px}.step p{color:#50655a;font-size:.88rem;margin:0;line-height:1.6}
-label{display:block;font-weight:750;margin-bottom:8px}input{width:100%;height:54px;border:1px solid #cbd5d0;border-radius:5px;padding:0 14px;outline:none;color:var(--ink);background:#fff}input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(18,63,61,.12)}
-.agreement{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;font-weight:600;margin:16px 0}.agreement input{width:20px;height:20px;flex:0 0 20px;margin:2px 0 0;accent-color:var(--brand)}
-.payment-methods{border:0;padding:0;margin:16px 0}.payment-methods legend{font-weight:750;margin-bottom:8px}.payment-option{display:flex;align-items:center;gap:9px;font-size:.9rem;font-weight:600;margin:8px 0}.payment-option input{width:20px;height:20px;flex:0 0 20px;margin:0;accent-color:var(--brand)}
-.qr-code{display:block;width:min(230px,100%);height:auto;margin:16px auto}.qr-panel{text-align:center}.qr-panel p{overflow-wrap:anywhere}
-.selected{display:flex;justify-content:space-between;gap:12px;background:#f1f5f1;border-radius:5px;padding:12px 14px;margin:16px 0;color:#33413e}.amount{font-size:2rem;font-weight:900;letter-spacing:-.04em;margin:5px 0 15px;color:var(--brand)}
-.pay-btn{width:100%;min-height:54px;background:var(--accent);color:#1e2926;font-size:1rem}.fine{font-size:.78rem;color:#6a7772;margin:12px 0 0;line-height:1.45}.status{margin-top:13px;padding:12px;border-radius:5px;background:#fff4e8;color:#754315;font-size:.88rem}[hidden]{display:none!important}
-footer{background:#102e29;color:#dce7e1;padding:50px 0 28px}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:end;padding-bottom:40px}.footer-top .eyebrow{color:#bad6c2}.footer-top h2{color:#fff;margin-top:10px}.footer-top p{color:#bdcec1;max-width:380px;margin:12px 0 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.15);padding-top:24px}.footer-brand{font-weight:850;letter-spacing:.08em;color:#fff}.contacts{display:flex;gap:25px;flex-wrap:wrap}.contacts a{text-decoration:none;color:#dce7e1}.contacts a:hover{color:#f2b778}
-.modal-backdrop{position:fixed;inset:0;background:rgba(5,20,19,.72);z-index:30;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex}.modal{width:min(100%,470px);background:#fff;color:var(--ink);border-radius:10px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.3);position:relative;max-height:calc(100dvh - 36px);overflow:auto}.modal-close{position:absolute;right:16px;top:14px;width:40px;height:40px;border:0;border-radius:50%;background:#edf2ee;color:#243330;font-size:1.35rem;cursor:pointer}.modal h2{font-size:2rem;margin:5px 48px 12px 0}.modal .small{color:var(--muted);font-size:.92rem;margin:0 0 20px}.modal .amount{font-size:2.2rem;margin:5px 0 15px}body.modal-open{overflow:hidden}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr 1fr;min-height:460px}.hero-copy{padding:42px}.services{grid-template-columns:repeat(2,minmax(0,1fr))}.process-inner{grid-template-columns:1fr;gap:30px}.process-inner h2{max-width:none}.photo{height:210px}}
-@media(max-width:650px){.wrap{width:calc(100% - 32px)}.nav{min-height:70px;gap:10px;flex-wrap:wrap;padding:10px 0}.brand{font-size:.8rem;gap:8px}.mark{width:38px;height:38px}.nav-right{gap:8px}.nav-link{display:none}.langs button{padding:6px 8px;font-size:.72rem}.hero{padding:16px 0 0}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:40px 26px}.hero h1{font-size:clamp(2.9rem,12vw,4rem);margin:18px 0}.hero-visual{min-height:260px}.hero-caption{left:22px;right:22px;bottom:20px}.hero-caption p{font-size:1.25rem}.service-strip{font-size:.65rem;gap:10px}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:14px}.services{grid-template-columns:1fr;gap:16px}.photo{height:230px}.service-body{padding:22px}.process{padding-bottom:65px}.steps{grid-template-columns:1fr;gap:20px}.step{display:grid;grid-template-columns:35px 1fr;column-gap:10px}.step-number{grid-row:span 2}.step h3{margin:3px 0 5px}.footer-top,.footer-inner{align-items:flex-start;flex-direction:column}.contacts{flex-direction:column;gap:7px}}
-@media(max-width:350px){.nav{justify-content:center}.brand{width:100%;justify-content:center}.langs{justify-content:center}.hero-copy{padding:34px 22px}.actions{grid-template-columns:1fr}.service-strip{flex-wrap:wrap}.modal{padding:20px}.modal h2{font-size:1.6rem}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.photo img,.btn{transition:none}}
-</style>
 </head>
-<body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#" aria-label="H Company home"><span class="mark">H</span><span>H COMPANY</span></a>
-    <div class="nav-right">
-    <a class="nav-link" href="#services" data-t="viewServices">Explore services</a>
-    <nav class="langs" aria-label="Choose language">
-      <button type="button" data-lang="en" aria-pressed="true">English</button>
-      <button type="button" data-lang="kn" aria-pressed="false">ಕನ್ನಡ</button>
-      <button type="button" data-lang="hi" aria-pressed="false">हिन्दी</button>
+<body id="top">
+<a class="skip-link" href="#main" data-t="skip">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="H Company home"><span class="brand-mark" aria-hidden="true">H<span>.</span></span><span>H COMPANY</span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <a href="#services" data-t="navServices">Services</a>
+      <a href="#supplies" data-t="navSupplies">Electrical supplies</a>
     </nav>
+    <div class="header-tools">
+      <label class="language"><span class="visually-hidden" data-t="language">Language</span><select id="languageSelect"><option value="en" lang="en">English</option><option value="kn" lang="kn">ಕನ್ನಡ</option><option value="hi" lang="hi">हिन्दी</option></select></label>
+      <a class="button button-dark header-enquire" href="#enquiry"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <p class="kicker"><span aria-hidden="true"></span><span data-t="heroKicker">FABRICATION / ELECTRICAL / TECHNOLOGY</span></p>
+      <h1 id="hero-title"><span data-t="headlineA">What needs</span> <em data-t="headlineB">doing?</em></h1>
+      <p class="hero-intro" data-t="heroIntro">A custom gate, a wiring job, or a laptop that won’t start. Tell us what you need and we’ll take it from there.</p>
+      <div class="hero-actions">
+        <a class="button button-lime" href="#enquiry"><span data-t="startEnquiry">Start an enquiry</span><span aria-hidden="true">↗</span></a>
+        <a class="hero-link" href="#services"><span data-t="viewServices">Explore services</span><span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="/assets/fabrication.webp" alt="Welder working on a steel frame in a workshop" fetchpriority="high">
+      <figcaption><span aria-hidden="true">01 / 03</span><span data-t="fabTitle">Fabrication &amp; Welding</span></figcaption>
+    </figure>
+  </section>
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <div class="eyebrow" data-t="eyebrow">LOCAL SERVICES · TRUSTED SOLUTIONS</div>
-          <h1 data-t="headline">Work Done.
-Problems Solved.</h1>
-          <p data-t="intro">Fabrication, electrical work and technology solutions — speak directly with us and we'll take it from there.</p>
-          <div class="hero-actions">
-            <a href="#services" class="btn hero-primary"><span data-t="viewServices">Explore services</span><span aria-hidden="true">↗</span></a>
-            <a class="btn hero-secondary call-link" aria-disabled="true"><span data-t="call">Phone number coming soon</span><span aria-hidden="true">↗</span></a>
-          </div>
+  <section class="wrap section" id="services" aria-labelledby="services-title">
+    <div class="section-head"><div><p class="kicker" data-t="serviceIndex">01 / SERVICE INDEX</p><h2 id="services-title" data-t="servicesTitle">Find the right team.</h2></div><p data-t="servicesIntro">Start with the work you need or ask about electrical parts and availability.</p></div>
+    <div class="services">
+      <article class="service">
+        <div class="service-image"><img src="/assets/fabrication.webp" loading="lazy" decoding="async" alt="Steel frame being welded"><span aria-hidden="true">01</span></div>
+        <div class="service-body"><h3 data-t="fabTitle">Fabrication &amp; Welding</h3><p data-t="fabDesc">Custom gates, grilles, railings, staircases and metal doors. Welding and repairs for existing metalwork.</p>
+          <div class="service-actions"><a class="button button-dark" href="#enquiry" data-enquire="fab"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a><button class="text-button book-trigger" data-service="fab" type="button" data-t="book">Book consultation</button></div>
         </div>
-        <div class="hero-visual">
-          <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="" fetchpriority="high">
-          <div class="hero-caption"><p data-t="heroCaption">Practical solutions for the work that matters.</p><span>H COMPANY / 01</span></div>
+      </article>
+      <article class="service">
+        <div class="service-image"><img src="/assets/electrical.webp" loading="lazy" decoding="async" alt="Wiring and circuit breakers in an electrical panel"><span aria-hidden="true">02</span></div>
+        <div class="service-body"><h3 data-t="elecTitle">Electrical &amp; Supplies</h3><p data-t="elecDesc">Wiring, fault finding and new installations. Ask us about switches, cables, boards, fittings and electrical spare parts.</p>
+          <div class="service-actions"><a class="button button-dark" href="#enquiry" data-enquire="elec"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a><button class="text-button book-trigger" data-service="elec" type="button" data-t="book">Book consultation</button></div>
         </div>
-      </div>
-      <div class="service-strip"><span data-t="stripLabel">FABRICATION &nbsp; / &nbsp; ELECTRICAL &nbsp; / &nbsp; TECHNOLOGY</span><span data-t="stripEnd">ONE PLACE. THREE SERVICES.</span></div>
+      </article>
+      <article class="service">
+        <div class="service-image"><img src="/assets/technology.webp" loading="lazy" decoding="async" alt="Hands working on an open desktop computer"><span aria-hidden="true">03</span></div>
+        <div class="service-body"><h3 data-t="techTitle">Technology Support</h3><p data-t="techDesc">Laptop and desktop repairs, hardware and software troubleshooting, setup and technical advice.</p>
+          <div class="service-actions"><a class="button button-dark" href="#enquiry" data-enquire="tech"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a><button class="text-button book-trigger" data-service="tech" type="button" data-t="book">Book consultation</button></div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <div><div class="eyebrow" data-t="servicesEyebrow">WHAT WE DO</div><h2 data-t="servicesTitle">Our Services</h2></div>
-        <p data-t="servicesIntro">Choose what you need. Call us to discuss the work, or book after speaking with us.</p>
-      </div>
-      <div class="services">
-        <article class="service">
-          <div class="photo">
-            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85" alt="Metal worker welding a steel fabrication project">
-            <span class="number">01</span>
-          </div>
-          <div class="service-body">
-            <h3 data-t="fabTitle">Fabrication & Welding</h3>
-            <p data-t="fabDesc">Welded gates, grills, railings, staircases, metal doors, custom fabrication and repair work.</p>
-            <div class="actions">
-              <a class="btn btn-call call-link" aria-disabled="true"><span>↗</span><span data-t="call">Phone number coming soon</span></a>
-              <button class="btn btn-book book-trigger" type="button" data-service="fab"><span data-t="book">Book Now</span><span>→</span></button>
-            </div>
-            <p class="charge-note" data-t="chargeNote">₹149 consultation charge · Non-refundable</p>
-          </div>
-        </article>
-        <article class="service">
-          <div class="photo">
-            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85" loading="lazy" decoding="async" alt="Electrician working on a home electrical installation">
-            <span class="number">02</span>
-          </div>
-          <div class="service-body">
-            <h3 data-t="elecTitle">Electrical Services</h3>
-            <p data-t="elecDesc">Small electrical issues, switches, connections, wiring, new home installations and complete electrical work.</p>
-            <div class="actions">
-              <a class="btn btn-call call-link" aria-disabled="true"><span>↗</span><span data-t="call">Phone number coming soon</span></a>
-              <button class="btn btn-book book-trigger" type="button" data-service="elec"><span data-t="book">Book Now</span><span>→</span></button>
-            </div>
-            <p class="charge-note" data-t="chargeNote">₹149 consultation charge · Non-refundable</p>
-          </div>
-        </article>
-        <article class="service">
-          <div class="photo">
-            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=85" loading="lazy" decoding="async" alt="Technician working on electronic hardware at a repair bench">
-            <span class="number">03</span>
-          </div>
-          <div class="service-body">
-            <h3 data-t="techTitle">Technology Solutions</h3>
-            <p data-t="techDesc">Software and hardware troubleshooting, computer and laptop repairs, setup and technical consultation.</p>
-            <div class="actions">
-              <a class="btn btn-call call-link" aria-disabled="true"><span>↗</span><span data-t="call">Phone number coming soon</span></a>
-              <button class="btn btn-book book-trigger" type="button" data-service="tech"><span data-t="book">Book Now</span><span>→</span></button>
-            </div>
-            <p class="charge-note" data-t="chargeNote">₹149 consultation charge · Non-refundable</p>
-          </div>
-        </article>
-      </div>
-    </div>
+  <section class="wrap supply" id="supplies" aria-labelledby="supplies-title">
+    <div><p class="kicker" data-t="supplyIndex">02 / ELECTRICAL SUPPLIES</p><h2 id="supplies-title" data-t="suppliesTitle">Parts for the whole job.</h2><p data-t="suppliesIntro">Tell us the part, rating or model you need and we’ll help you check availability.</p><a class="button button-dark" href="#enquiry" data-enquire="elec"><span data-t="partsEnquiry">Enquire about parts</span><span aria-hidden="true">↗</span></a></div>
+    <ul class="parts-list"><li data-t="partsWiring">Wires, cables &amp; conduits</li><li data-t="partsSwitches">Switches, sockets &amp; switchboards</li><li data-t="partsProtection">Circuit breakers, fuses &amp; distribution boards</li><li data-t="partsAccessories">Lighting, fittings &amp; electrical accessories</li><li data-t="partsAppliance">Appliance spares &amp; replacement parts</li></ul>
   </section>
 
-  <section class="process" aria-labelledby="processTitle">
-    <div class="wrap process-inner">
-      <div><div class="eyebrow" data-t="processEyebrow">A SIMPLE START</div><h2 id="processTitle" data-t="processTitle">Let's get to work.</h2></div>
-      <div class="steps">
-        <div class="step"><span class="step-number">01</span><h3 data-t="stepOneTitle">Choose a service</h3><p data-t="stepOneText">Find the kind of help you need from our three services.</p></div>
-        <div class="step"><span class="step-number">02</span><h3 data-t="stepTwoTitle">Talk to us</h3><p data-t="stepTwoText">Discuss the work with us before making a booking.</p></div>
-        <div class="step"><span class="step-number">03</span><h3 data-t="stepThreeTitle">Book your consultation</h3><p data-t="stepThreeText">Confirm the service and pay the consultation charge when you're ready.</p></div>
+  <section class="wrap section enquiry" id="enquiry" aria-labelledby="enquiry-title">
+    <div class="enquiry-copy"><p class="kicker" data-t="enquiryIndex">03 / GET IN TOUCH</p><h2 id="enquiry-title" data-t="enquiryTitle">Tell us what you need.</h2><p data-t="enquiryIntro">Choose a service and tell us a little about the job. You can call the team or open an email draft to send.</p>
+      <p class="consultation-note" data-t="consultationNote">Enquiring is free. If you decide to book after speaking with us, the consultation charge is ₹149 and is non-refundable.</p>
+    </div>
+    <div class="enquiry-form">
+      <label for="enquiryService" data-t="selectService">Choose a service</label>
+      <select id="enquiryService"><option value="fab" data-t="fabTitle">Fabrication &amp; Welding</option><option value="elec" data-t="elecTitle">Electrical &amp; Supplies</option><option value="tech" data-t="techTitle">Technology Support</option></select>
+      <label for="enquiryDetails" data-t="detailsLabel">What do you need? (optional)</label>
+      <textarea id="enquiryDetails" rows="4" maxlength="600"></textarea>
+      <div class="enquiry-actions">
+        <a id="enquiryPhone" class="button button-dark" hidden><span data-t="call">Call Now</span><span aria-hidden="true">↗</span></a>
+        <a id="enquiryEmail" class="button button-outline" hidden><span data-t="emailEnquiry">Open email draft</span><span aria-hidden="true">↗</span></a>
       </div>
+      <p class="fine" id="enquiryNumber" hidden></p>
+      <p class="fine" id="enquiryUnavailable" data-t="contactPending" hidden>Contact details coming soon.</p>
     </div>
   </section>
-
-  <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <section class="modal">
+  <dialog class="modal" id="bookingModal" aria-labelledby="modalTitle">
       <button class="modal-close" id="closeModal" type="button" aria-label="Close">×</button>
       <div class="eyebrow" data-t="bookingEyebrow">AFTER SPEAKING WITH US</div>
       <h2 id="modalTitle" data-t="bookingTitle">Consultation Booking</h2>
@@ -183,16 +118,15 @@ Problems Solved.</h1>
       <label for="customerName" data-t="nameLabel">Your Name</label>
       <input id="customerName" type="text" maxlength="60" autocomplete="name" placeholder="Enter your name">
       <div class="selected"><span data-t="selectedService">Selected service</span><strong id="selectedName">Fabrication &amp; Welding</strong></div>
-      <div class="small" data-t="bookingAmountLabel">Consultation charge · Non-refundable</div>
-      <div class="amount">₹149</div>
+      <div class="price"><div class="small" data-t="bookingAmountLabel">Consultation charge · Non-refundable</div><div class="amount">₹149</div></div>
       <label class="agreement"><input id="agreement" type="checkbox"><span data-t="agreement">I have discussed this service on the call and agree to the non-refundable ₹149 consultation charge.</span></label>
       <fieldset class="payment-methods">
         <legend data-t="paymentMethod">Choose how to pay</legend>
         <label class="payment-option"><input type="radio" name="paymentMethod" value="app"><span data-t="appOption">Open a UPI app on this device</span></label>
         <label class="payment-option"><input type="radio" name="paymentMethod" value="qr"><span data-t="qrOption">Scan a QR code with a phone</span></label>
       </fieldset>
-      <button class="btn pay-btn" id="payButton" type="button" disabled><span data-t="pay">Pay ₹149 via UPI</span><span>→</span></button>
-      <button class="btn pay-btn" id="showQr" type="button" hidden disabled><span data-t="showQr">Show payment QR code</span><span>→</span></button>
+      <button class="btn pay-btn" id="payButton" type="button" disabled><span data-t="pay">Pay ₹149 via UPI</span><span aria-hidden="true">→</span></button>
+      <button class="btn pay-btn" id="showQr" type="button" hidden disabled><span data-t="showQr">Show payment QR code</span><span aria-hidden="true">→</span></button>
       <div class="qr-panel" id="qrPanel" hidden>
         <img class="qr-code" id="qrImage" alt="UPI payment QR code">
         <p class="fine"><span data-t="qrInstructions">Scan with your UPI app and enter your name in the payment note:</span> <strong id="qrName"></strong></p>
@@ -201,244 +135,14 @@ Problems Solved.</h1>
       <p class="fine" id="appFine" data-t="paymentFine">Your UPI app will open with ₹149 and the booking details. Complete payment there. Returning here does not confirm payment.</p>
       <p class="fine" id="qrFine" data-t="qrFine" hidden>Payment is completed in your UPI app. This page cannot confirm payment.</p>
       <div class="status" id="status" role="status" hidden></div>
-    </section>
-  </div>
+  </dialog>
 </main>
-
-<footer>
-  <div class="wrap">
-  <div class="footer-top"><div><div class="eyebrow" data-t="footerEyebrow">LET'S TALK</div><h2 data-t="footerTitle">Have work in mind?</h2><p data-t="footerText">Tell us what you need. We're here to help you get started.</p></div><a class="btn hero-primary" href="#services"><span data-t="viewServices">Explore services</span><span aria-hidden="true">↗</span></a></div>
-  <div class="footer-inner">
-    <div class="footer-brand">H COMPANY</div>
-    <div class="contacts">
-      <a id="footerPhone" hidden></a>
-      <a id="footerEmail" hidden></a>
-      <span id="contactPending" data-t="contactPending">Contact details coming soon.</span>
-    </div>
-  </div>
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <a class="brand" href="#top" aria-label="H Company home"><span class="brand-mark" aria-hidden="true">H<span>.</span></span><span>H COMPANY</span></a>
+    <a href="#services" data-t="navServices">Services</a>
+    <a href="#enquiry" data-t="startEnquiry">Start an enquiry</a>
   </div>
 </footer>
-
-<script>
-const CONFIG = {
-  phone: document.querySelector('meta[name="hcompany-phone"]').content,
-  email: document.querySelector('meta[name="hcompany-email"]').content,
-  upiId: document.querySelector('meta[name="hcompany-upi"]').content,
-  qrImage: document.querySelector('meta[name="hcompany-upi-qr"]').content,
-  payeeName: "H Company"
-};
-
-const translations = {
- en:{
-  viewServices:"Explore services",heroCaption:"Practical solutions for the work that matters.",stripLabel:"FABRICATION  /  ELECTRICAL  /  TECHNOLOGY",stripEnd:"ONE PLACE. THREE SERVICES.",servicesEyebrow:"WHAT WE DO",processEyebrow:"A SIMPLE START",processTitle:"Let's get to work.",stepOneTitle:"Choose a service",stepOneText:"Find the kind of help you need from our three services.",stepTwoTitle:"Talk to us",stepTwoText:"Discuss the work with us before making a booking.",stepThreeTitle:"Book your consultation",stepThreeText:"Confirm the service and pay the consultation charge when you're ready.",footerEyebrow:"LET'S TALK",footerTitle:"Have work in mind?",footerText:"Tell us what you need. We're here to help you get started.",
-  eyebrow:"LOCAL SERVICES · TRUSTED SOLUTIONS",headline:"Work Done.\nProblems Solved.",
-  intro:"Fabrication, electrical work and technology solutions — speak directly with us and we'll take it from there.",
-  servicesTitle:"Our Services",servicesIntro:"Choose what you need. Call us to discuss the work, or book after speaking with us.",
-  fabTitle:"Fabrication & Welding",fabDesc:"Welded gates, grills, railings, staircases, metal doors, custom fabrication and repair work.",
-  elecTitle:"Electrical Services",elecDesc:"Small electrical issues, switches, connections, wiring, new home installations and complete electrical work.",
-  techTitle:"Technology Solutions",techDesc:"Software and hardware troubleshooting, computer and laptop repairs, setup and technical consultation.",
-  call:"Call Now",callPending:"Phone number coming soon",contactPending:"Contact details coming soon.",book:"Book Now",bookingEyebrow:"AFTER SPEAKING WITH US",bookingTitle:"Consultation Booking",
-  chargeNote:"₹149 consultation charge · Non-refundable",agreement:"I have discussed this service on the call and agree to the non-refundable ₹149 consultation charge.",formIntro:"Enter your name to continue.",
-  nameLabel:"Your Name",namePlaceholder:"Enter your name",selectedService:"Selected service",bookingAmountLabel:"Consultation charge · Non-refundable",
-  pay:"Pay ₹149 via UPI",paymentFine:"Your UPI app will open with ₹149 and the booking details. Complete payment there. Returning here does not confirm payment.",
-  phoneLabel:"Phone",emailLabel:"Email",chooseService:"Please select a service first.",enterName:"Please enter your name.",
-  paymentMethod:"Choose how to pay",appOption:"Open a UPI app on this device",qrOption:"Scan a QR code with a phone",showQr:"Show payment QR code",qrInstructions:"Scan with your UPI app and enter your name in the payment note:",qrAmount:"Check that the payment is ₹149 before you pay.",qrFine:"Payment is completed in your UPI app. This page cannot confirm payment.",qrAlt:"UPI payment QR code",qrUnavailable:"The payment QR code is not available yet.",qrError:"The payment QR code could not be loaded. Please try another payment method.",
-  configure:"UPI payment is not available yet.",
-  opening:"Opening your UPI app. Complete the payment and keep the UPI transaction confirmation.",
-  serviceNames:{fab:"Fabrication & Welding",elec:"Electrical Services",tech:"Technology Solutions"}
- },
- kn:{
-  viewServices:"ಸೇವೆಗಳನ್ನು ನೋಡಿ",heroCaption:"ನಿಮ್ಮ ಮುಖ್ಯ ಕೆಲಸಗಳಿಗೆ ಪ್ರಾಯೋಗಿಕ ಪರಿಹಾರಗಳು.",stripLabel:"ಫ್ಯಾಬ್ರಿಕೇಶನ್  /  ವಿದ್ಯುತ್  /  ತಂತ್ರಜ್ಞಾನ",stripEnd:"ಒಂದೇ ಸ್ಥಳ. ಮೂರು ಸೇವೆಗಳು.",servicesEyebrow:"ನಮ್ಮ ಕೆಲಸ",processEyebrow:"ಸರಳ ಆರಂಭ",processTitle:"ಕೆಲಸ ಆರಂಭಿಸೋಣ.",stepOneTitle:"ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ",stepOneText:"ನಮ್ಮ ಮೂರು ಸೇವೆಗಳಲ್ಲಿ ನಿಮಗೆ ಬೇಕಾದ ಸಹಾಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ.",stepTwoTitle:"ನಮ್ಮೊಂದಿಗೆ ಮಾತನಾಡಿ",stepTwoText:"ಬುಕ್ ಮಾಡುವ ಮೊದಲು ಕೆಲಸದ ಬಗ್ಗೆ ನಮ್ಮೊಂದಿಗೆ ಚರ್ಚಿಸಿ.",stepThreeTitle:"ಸಮಾಲೋಚನೆ ಬುಕ್ ಮಾಡಿ",stepThreeText:"ಸೇವೆಯನ್ನು ಖಚಿತಪಡಿಸಿ ಮತ್ತು ನಿಮಗೆ ಅನುಕೂಲವಾದಾಗ ಸಮಾಲೋಚನೆ ಶುಲ್ಕ ಪಾವತಿಸಿ.",footerEyebrow:"ಮಾತನಾಡೋಣ",footerTitle:"ಕೆಲಸ ಮಾಡಿಸಬೇಕೇ?",footerText:"ನಿಮಗೆ ಏನು ಬೇಕೆಂದು ತಿಳಿಸಿ. ಪ್ರಾರಂಭಿಸಲು ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.",
-  eyebrow:"ಸ್ಥಳೀಯ ಸೇವೆಗಳು · ನಂಬಿಕಾರ್ಹ ಪರಿಹಾರಗಳು",headline:"ಕೆಲಸ ಪೂರ್ಣ. ಸಮಸ್ಯೆಗೆ ಪರಿಹಾರ.",
-  intro:"ಫ್ಯಾಬ್ರಿಕೇಶನ್, ವಿದ್ಯುತ್ ಕೆಲಸ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಸೇವೆಗಳು — ನಮ್ಮೊಂದಿಗೆ ನೇರವಾಗಿ ಮಾತನಾಡಿ. ಮುಂದಿನದನ್ನು ನಾವು ನೋಡಿಕೊಳ್ಳುತ್ತೇವೆ.",
-  servicesTitle:"ನಮ್ಮ ಸೇವೆಗಳು",servicesIntro:"ನಿಮಗೆ ಬೇಕಾದ ಸೇವೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಕೆಲಸದ ಬಗ್ಗೆ ಮಾತನಾಡಲು ಕರೆ ಮಾಡಿ ಅಥವಾ ಮಾತನಾಡಿದ ನಂತರ ಬುಕ್ ಮಾಡಿ.",
-  fabTitle:"ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ವೆಲ್ಡಿಂಗ್",fabDesc:"ವೆಲ್ಡ್ ಗೇಟ್‌ಗಳು, ಗ್ರಿಲ್‌ಗಳು, ರೇಲಿಂಗ್‌ಗಳು, ಮೆಟ್ಟಿಲುಗಳು, ಲೋಹದ ಬಾಗಿಲುಗಳು, ಕಸ್ಟಮ್ ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ರಿಪೇರಿ.",
-  elecTitle:"ವಿದ್ಯುತ್ ಸೇವೆಗಳು",elecDesc:"ಸಣ್ಣ ವಿದ್ಯುತ್ ಸಮಸ್ಯೆಗಳು, ಸ್ವಿಚ್‌ಗಳು, ಸಂಪರ್ಕಗಳು, ವೈರಿಂಗ್, ಹೊಸ ಮನೆಯ ವಿದ್ಯುತ್ ಅಳವಡಿಕೆ ಮತ್ತು ಸಂಪೂರ್ಣ ವಿದ್ಯುತ್ ಕೆಲಸ.",
-  techTitle:"ತಂತ್ರಜ್ಞಾನ ಪರಿಹಾರಗಳು",techDesc:"ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ಹಾರ್ಡ್‌ವೇರ್ ಸಮಸ್ಯೆ ಪರಿಹಾರ, ಕಂಪ್ಯೂಟರ್ ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ರಿಪೇರಿ, ಸೆಟಪ್ ಮತ್ತು ತಾಂತ್ರಿಕ ಸಲಹೆ.",
-  call:"ಈಗ ಕರೆ ಮಾಡಿ",callPending:"ಫೋನ್ ಸಂಖ್ಯೆ ಶೀಘ್ರದಲ್ಲೇ",contactPending:"ಸಂಪರ್ಕ ವಿವರಗಳು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಾಗುತ್ತವೆ.",book:"ಈಗ ಬುಕ್ ಮಾಡಿ",bookingEyebrow:"ನಮ್ಮೊಂದಿಗೆ ಮಾತನಾಡಿದ ನಂತರ",bookingTitle:"ಸಮಾಲೋಚನೆ ಬುಕ್ಕಿಂಗ್",
-  chargeNote:"₹149 ಸಮಾಲೋಚನೆ ಶುಲ್ಕ · ಮರುಪಾವತಿ ಇಲ್ಲ",agreement:"ಈ ಸೇವೆಯ ಬಗ್ಗೆ ನಾನು ಕರೆಯಲ್ಲಿ ಚರ್ಚಿಸಿದ್ದೇನೆ ಮತ್ತು ಮರುಪಾವತಿಯಾಗದ ₹149 ಸಮಾಲೋಚನೆ ಶುಲ್ಕಕ್ಕೆ ಒಪ್ಪುತ್ತೇನೆ.",formIntro:"ಮುಂದುವರಿಯಲು ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.",
-  nameLabel:"ನಿಮ್ಮ ಹೆಸರು",namePlaceholder:"ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ",selectedService:"ಆಯ್ಕೆ ಮಾಡಿದ ಸೇವೆ",bookingAmountLabel:"ಸಮಾಲೋಚನೆ ಶುಲ್ಕ · ಮರುಪಾವತಿ ಇಲ್ಲ",
-  pay:"UPI ಮೂಲಕ ₹149 ಪಾವತಿಸಿ",paymentFine:"ಮೊತ್ತ ಮತ್ತು ಬುಕ್ಕಿಂಗ್ ವಿವರಗಳೊಂದಿಗೆ ನಿಮ್ಮ UPI ಆ್ಯಪ್ ತೆರೆಯುತ್ತದೆ. ಅಲ್ಲಿ ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ. ಆ್ಯಪ್‌ಗೆ ಹಿಂತಿರುಗಿದಷ್ಟರಿಂದ ಪಾವತಿ ದೃಢೀಕರಣವಾಗುವುದಿಲ್ಲ.",
-  phoneLabel:"ಫೋನ್",emailLabel:"ಇಮೇಲ್",chooseService:"ದಯವಿಟ್ಟು ಮೊದಲು ಸೇವೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.",enterName:"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.",
-  paymentMethod:"ಪಾವತಿ ವಿಧಾನವನ್ನು ಆಯ್ಕೆಮಾಡಿ",appOption:"ಈ ಸಾಧನದಲ್ಲಿ UPI ಆ್ಯಪ್ ತೆರೆಯಿರಿ",qrOption:"ಫೋನ್ ಮೂಲಕ QR ಕೋಡ್ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",showQr:"ಪಾವತಿ QR ಕೋಡ್ ತೋರಿಸಿ",qrInstructions:"ನಿಮ್ಮ UPI ಆ್ಯಪ್‌ನಿಂದ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ ಮತ್ತು ಪಾವತಿ ಟಿಪ್ಪಣಿಯಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ:",qrAmount:"ಪಾವತಿಸುವ ಮೊದಲು ಮೊತ್ತ ₹149 ಇದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.",qrFine:"ಪಾವತಿಯನ್ನು ನಿಮ್ಮ UPI ಆ್ಯಪ್‌ನಲ್ಲಿ ಪೂರ್ಣಗೊಳಿಸಿ. ಈ ಪುಟದಲ್ಲಿ ಪಾವತಿಯನ್ನು ದೃಢೀಕರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.",qrAlt:"UPI ಪಾವತಿ QR ಕೋಡ್",qrUnavailable:"ಪಾವತಿ QR ಕೋಡ್ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ.",qrError:"ಪಾವತಿ QR ಕೋಡ್ ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಬೇರೆ ಪಾವತಿ ವಿಧಾನವನ್ನು ಪ್ರಯತ್ನಿಸಿ.",
-  configure:"UPI ಪಾವತಿ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ.",
-  opening:"ನಿಮ್ಮ UPI ಆ್ಯಪ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ. ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ ಮತ್ತು UPI ವಹಿವಾಟಿನ ದೃಢೀಕರಣವನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ.",
-  serviceNames:{fab:"ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ವೆಲ್ಡಿಂಗ್",elec:"ವಿದ್ಯುತ್ ಸೇವೆಗಳು",tech:"ತಂತ್ರಜ್ಞಾನ ಪರಿಹಾರಗಳು"}
- },
- hi:{
-  viewServices:"सेवाएँ देखें",heroCaption:"आपके ज़रूरी कामों के लिए उपयोगी समाधान।",stripLabel:"फैब्रिकेशन  /  इलेक्ट्रिकल  /  टेक्नोलॉजी",stripEnd:"एक जगह। तीन सेवाएँ।",servicesEyebrow:"हम क्या करते हैं",processEyebrow:"आसान शुरुआत",processTitle:"चलिए काम शुरू करें।",stepOneTitle:"सेवा चुनें",stepOneText:"हमारी तीन सेवाओं में से अपनी ज़रूरत की सेवा चुनें।",stepTwoTitle:"हमसे बात करें",stepTwoText:"बुक करने से पहले काम के बारे में हमसे चर्चा करें।",stepThreeTitle:"परामर्श बुक करें",stepThreeText:"सेवा की पुष्टि करें और तैयार होने पर परामर्श शुल्क का भुगतान करें।",footerEyebrow:"बात करें",footerTitle:"कोई काम है?",footerText:"हमें अपनी ज़रूरत बताएँ। शुरुआत करने में हम आपकी मदद करेंगे।",
-  eyebrow:"स्थानीय सेवाएँ · भरोसेमंद समाधान",headline:"काम पूरा। समस्या हल।",
-  intro:"फैब्रिकेशन, इलेक्ट्रिकल काम और टेक्नोलॉजी सेवाएँ — सीधे हमसे बात करें, आगे की ज़िम्मेदारी हमारी।",
-  servicesTitle:"हमारी सेवाएँ",servicesIntro:"अपनी ज़रूरत की सेवा चुनें। काम के बारे में बात करने के लिए कॉल करें या बात करने के बाद बुक करें।",
-  fabTitle:"फैब्रिकेशन और वेल्डिंग",fabDesc:"वेल्डेड गेट, ग्रिल, रेलिंग, सीढ़ियाँ, धातु के दरवाज़े, कस्टम फैब्रिकेशन और मरम्मत।",
-  elecTitle:"इलेक्ट्रिकल सेवाएँ",elecDesc:"छोटी इलेक्ट्रिकल समस्याएँ, स्विच, कनेक्शन, वायरिंग, नए घर की इलेक्ट्रिकल फिटिंग और पूरा इलेक्ट्रिकल काम।",
-  techTitle:"टेक्नोलॉजी समाधान",techDesc:"सॉफ्टवेयर और हार्डवेयर की समस्या, कंप्यूटर और लैपटॉप रिपेयर, सेटअप और तकनीकी सलाह।",
-  call:"अभी कॉल करें",callPending:"फ़ोन नंबर जल्द उपलब्ध होगा",contactPending:"संपर्क विवरण जल्द उपलब्ध होंगे।",book:"अभी बुक करें",bookingEyebrow:"हमसे बात करने के बाद",bookingTitle:"परामर्श बुकिंग",
-  chargeNote:"₹149 परामर्श शुल्क · वापस नहीं होगा",agreement:"मैंने कॉल पर इस सेवा के बारे में चर्चा की है और ₹149 के गैर-वापसी योग्य परामर्श शुल्क से सहमत हूँ।",formIntro:"आगे बढ़ने के लिए अपना नाम दर्ज करें।",
-  nameLabel:"आपका नाम",namePlaceholder:"अपना नाम दर्ज करें",selectedService:"चुनी गई सेवा",bookingAmountLabel:"परामर्श शुल्क · वापस नहीं होगा",
-  pay:"UPI से ₹149 भुगतान करें",paymentFine:"राशि और बुकिंग विवरण के साथ आपका UPI ऐप खुलेगा। वहाँ भुगतान पूरा करें। केवल वेबसाइट पर वापस आने से भुगतान की पुष्टि नहीं होती।",
-  phoneLabel:"फ़ोन",emailLabel:"ईमेल",chooseService:"कृपया पहले एक सेवा चुनें।",enterName:"कृपया अपना नाम दर्ज करें।",
-  paymentMethod:"भुगतान का तरीका चुनें",appOption:"इस डिवाइस पर UPI ऐप खोलें",qrOption:"फ़ोन से QR कोड स्कैन करें",showQr:"भुगतान QR कोड दिखाएँ",qrInstructions:"अपने UPI ऐप से स्कैन करें और भुगतान नोट में अपना नाम लिखें:",qrAmount:"भुगतान से पहले जाँचें कि राशि ₹149 है।",qrFine:"भुगतान अपने UPI ऐप में पूरा करें। यह पेज भुगतान की पुष्टि नहीं कर सकता।",qrAlt:"UPI भुगतान QR कोड",qrUnavailable:"भुगतान QR कोड अभी उपलब्ध नहीं है।",qrError:"भुगतान QR कोड लोड नहीं हो सका। कृपया दूसरा भुगतान तरीका आज़माएँ।",
-  configure:"UPI भुगतान अभी उपलब्ध नहीं है।",
-  opening:"आपका UPI ऐप खुल रहा है। भुगतान पूरा करें और UPI लेन-देन की पुष्टि संभालकर रखें।",
-  serviceNames:{fab:"फैब्रिकेशन और वेल्डिंग",elec:"इलेक्ट्रिकल सेवाएँ",tech:"टेक्नोलॉजी समाधान"}
- }
-};
-
-let currentLang="en", selectedService="", bookingOpener=null;
-const $=id=>document.getElementById(id);
-function applyLanguage(lang){
- currentLang=translations[lang]?lang:"en";
- document.documentElement.lang=currentLang;
- const dict=translations[currentLang];
- document.querySelectorAll("[data-t]").forEach(node=>{
-   const key=node.getAttribute("data-t");
-   if(Object.prototype.hasOwnProperty.call(dict,key)) node.textContent=dict[key];
- });
- $("qrImage").alt=dict.qrAlt;
- const nameInput=$("customerName");
- if(nameInput) nameInput.placeholder=dict.namePlaceholder;
- document.querySelectorAll("[data-lang]").forEach(b=>{
-   b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===currentLang));
- });
- setContactDetails();
- if(selectedService) $("selectedName").textContent=dict.serviceNames[selectedService];
- if(!$("bookingModal").classList.contains("open")) return saveLanguage();
- updatePaymentAvailability();
- saveLanguage();
-}
-function saveLanguage(){try{window.localStorage.setItem("hcompany-language",currentLang)}catch(e){}}
-document.querySelectorAll("[data-lang]").forEach(b=>{
- b.addEventListener("click",function(){applyLanguage(this.getAttribute("data-lang"))});
-});
-let initialLanguage="en";
-try{initialLanguage=window.localStorage.getItem("hcompany-language")||"en"}catch(e){}
-applyLanguage(initialLanguage);
-
-function openBooking(key, opener){
- selectedService=key;
- bookingOpener=opener;
- $("selectedName").textContent=translations[currentLang].serviceNames[key];
- $("bookingModal").classList.add("open");
- document.body.classList.add("modal-open");
- $("agreement").checked=false;
- $("customerName").value="";
- document.querySelector(`input[name="paymentMethod"][value="${isMobileDevice()?"app":"qr"}"]`).checked=true;
- $("qrPanel").hidden=true;
- updatePaymentAvailability();
- $("customerName").focus();
-}
-function closeBooking(){
- $("bookingModal").classList.remove("open");
- document.body.classList.remove("modal-open");
- if(bookingOpener){bookingOpener.focus();bookingOpener=null;}
-}
-document.querySelectorAll(".book-trigger").forEach(b=>b.addEventListener("click",()=>openBooking(b.dataset.service,b)));
-$("closeModal").addEventListener("click",closeBooking);
-$("bookingModal").addEventListener("click",e=>{if(e.target===$("bookingModal"))closeBooking()});
-document.addEventListener("keydown",e=>{
- if(!$('bookingModal').classList.contains('open')) return;
- if(e.key==='Escape'){closeBooking();return;}
- if(e.key==='Tab'){
-   const focusable=[...$('bookingModal').querySelectorAll('button:not(:disabled), input:not(:disabled), a[href]')].filter(element=>element.getClientRects().length);
-   const first=focusable[0], last=focusable[focusable.length-1];
-   if(e.shiftKey && document.activeElement===first){e.preventDefault();last.focus();}
-   else if(!e.shiftKey && document.activeElement===last){e.preventDefault();first.focus();}
- }
-});
-
-function setContactDetails(){
- const t=translations[currentLang];
- const phone=CONFIG.phone.trim();
- const validPhone=/^\+?[0-9][0-9 ()-]{6,20}$/.test(phone);
- document.querySelectorAll(".call-link").forEach(a=>{
-   if(validPhone) a.href="tel:"+phone.replace(/[^\d+]/g,"");
-   else a.removeAttribute("href");
-   a.setAttribute("aria-disabled",String(!validPhone));
-   a.querySelector('[data-t="call"]').textContent=validPhone?t.call:t.callPending;
- });
- const email=CONFIG.email.trim();
- const validEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
- const footerPhone=$("footerPhone"), footerEmail=$("footerEmail");
- footerPhone.hidden=!validPhone;
- if(validPhone){footerPhone.href="tel:"+phone.replace(/[^\d+]/g,"");footerPhone.textContent="☎ "+t.phoneLabel+": "+phone;}
- footerEmail.hidden=!validEmail;
- if(validEmail){footerEmail.href="mailto:"+email;footerEmail.textContent="✉ "+t.emailLabel+": "+email;}
- $("contactPending").hidden=validPhone||validEmail;
-}
-function getUpiId(){
- let value=CONFIG.upiId.trim();
- if(value.toLowerCase().startsWith("upi://")){
-   try{
-     const link=new URL(value);
-     if(link.protocol!=="upi:"||link.hostname!=="pay") return "";
-     value=link.searchParams.get("pa")||"";
-   }catch(e){return "";}
- }
- return /^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+$/.test(value)?value:"";
-}
-function isMobileDevice(){
- return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
-   (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-}
-function getQrUrl(){
- const value=CONFIG.qrImage.trim();
- if(!value) return "";
- try{
-   const url=new URL(value,document.baseURI);
-   return url.origin===location.origin && url.protocol===location.protocol &&
-     ["http:","https:","file:"].includes(url.protocol) ? url.href : "";
- }catch(e){return "";}
-}
-function updatePaymentAvailability(){
- const isQr=document.querySelector('input[name="paymentMethod"]:checked')?.value==="qr";
- const ready=Boolean(isQr?getQrUrl():getUpiId());
- const agreed=$("agreement").checked;
- $("payButton").hidden=isQr;
- $("showQr").hidden=!isQr;
- $("payButton").disabled=!ready||!agreed;
- $("showQr").disabled=!ready||!agreed;
- $("appFine").hidden=isQr;
- $("qrFine").hidden=!isQr;
- if(!isQr||!ready||!agreed) $("qrPanel").hidden=true;
- $("status").hidden=ready;
- $("status").textContent=ready?"":translations[currentLang][isQr?"qrUnavailable":"configure"];
-}
-
-$("agreement").addEventListener("change",updatePaymentAvailability);
-document.querySelectorAll('input[name="paymentMethod"]').forEach(input=>input.addEventListener("change",()=>{
- $("qrPanel").hidden=true;
- updatePaymentAvailability();
-}));
-$("customerName").addEventListener("input",()=>{$("qrPanel").hidden=true;});
-$("showQr").addEventListener("click",()=>{
- const name=$("customerName").value.trim(), url=getQrUrl();
- if(name.length<2){alert(translations[currentLang].enterName);$("customerName").focus();return;}
- if(!url||!$("agreement").checked){updatePaymentAvailability();return;}
- $("qrName").textContent=name;
- $("qrImage").src=url;
- $("qrPanel").hidden=false;
-});
-$("qrImage").addEventListener("error",()=>{
- if($("qrPanel").hidden) return;
- $("qrPanel").hidden=true;
- $("status").hidden=false;
- $("status").textContent=translations[currentLang].qrError;
-});
-
-$("payButton").addEventListener("click",()=>{
- const t=translations[currentLang], name=$("customerName").value.trim();
- if(!selectedService){alert(t.chooseService);return}
- if(name.length<2){alert(t.enterName);$("customerName").focus();return}
- if(!getUpiId()||!$("agreement").checked){updatePaymentAvailability();return;}
- const note=(name+" - "+translations.en.serviceNames[selectedService]).slice(0,80);
- const upi="upi://pay?"+new URLSearchParams({
-   pa:getUpiId(),pn:CONFIG.payeeName,am:"149.00",cu:"INR",tn:note
- }).toString();
- $("status").hidden=false;
- $("status").textContent=t.opening;
- window.location.href=upi;
-});
-</script>
 </body>
 </html>
