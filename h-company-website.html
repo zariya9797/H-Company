@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101b1b">
+<title>H Company | Work Done. Problems Solved.</title>
+<style>
+:root{--ink:#172323;--muted:#647271;--paper:#f5f7f4;--card:#fff;--brand:#123f3d;--accent:#e58a3a;--line:#e2e8e3;--green:#176b48;--shadow:0 18px 50px rgba(20,45,40,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}button,input{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{background:rgba(18,63,61,.97);color:#fff;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:.06em;font-size:1.15rem}
+.mark{width:38px;height:38px;border-radius:12px;background:var(--accent);color:#182522;display:grid;place-items:center;font-weight:950;font-size:1.2rem}
+.langs{display:flex;gap:6px}.langs button{border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:999px;padding:9px 13px;cursor:pointer;font-weight:700;font-size:.88rem}
+.langs button[aria-pressed=true]{background:#fff;color:var(--brand);border-color:#fff}
+.hero{padding:76px 0 56px;background:radial-gradient(ellipse at 82% 15%,rgba(229,138,58,.18),transparent 32%),linear-gradient(135deg,#eaf0e9,#f7f8f4)}
+.hero-inner{max-width:780px}.eyebrow{color:var(--green);font-weight:800;letter-spacing:.13em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-.055em;margin:16px 0 18px;max-width:760px}
+.hero p{font-size:1.12rem;color:#52615e;max-width:610px;margin:0}
+.hero-rule{height:5px;width:76px;background:var(--accent);border-radius:9px;margin-top:30px}
+.section{padding:62px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.035em;margin:0}
+.section-head p{margin:0;color:var(--muted);max-width:400px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
+.photo{height:220px;position:relative;overflow:hidden;background:#d9e1db}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.service:hover .photo img{transform:scale(1.045)}
+.number{position:absolute;left:16px;top:16px;background:rgba(18,63,61,.92);color:white;border-radius:999px;padding:6px 11px;font-size:.76rem;font-weight:800;letter-spacing:.08em}
+.service-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.service h3{font-size:1.35rem;line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}
+.service p{color:var(--muted);margin:0 0 22px;flex:1}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{min-height:48px;border:0;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;cursor:pointer;padding:11px 12px;transition:transform .15s,filter .15s}
+.btn:active{transform:scale(.98)}.btn-call{background:#e9f4ec;color:#176b48}.btn-book{background:var(--brand);color:white}.btn:hover{filter:brightness(.96)}
+.booking{background:#102c2b;color:#fff;padding:56px 0}
+.booking-inner{display:grid;grid-template-columns:1fr .9fr;gap:45px;align-items:center}
+.booking h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:12px}.booking-copy p{color:#c4d2cc;max-width:490px}
+.booking-note{display:inline-flex;align-items:center;gap:8px;color:#f3c18d;font-weight:750;font-size:.9rem;margin-top:10px}
+.form-card{background:#fff;color:var(--ink);border-radius:22px;padding:25px;box-shadow:0 20px 55px rgba(0,0,0,.2)}
+.form-card .small{color:var(--muted);font-size:.9rem;margin:0 0 18px}
+label{display:block;font-weight:750;margin-bottom:8px}
+input{width:100%;height:54px;border:1px solid #cbd5d0;border-radius:11px;padding:0 14px;outline:none;color:var(--ink);background:#fff}
+input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(18,63,61,.12)}
+.selected{display:flex;justify-content:space-between;gap:12px;background:#f1f5f1;border-radius:11px;padding:12px 14px;margin:16px 0;color:#33413e}
+.amount{font-size:2rem;font-weight:900;letter-spacing:-.04em;margin:5px 0 15px;color:var(--brand)}
+.pay-btn{width:100%;min-height:54px;background:var(--accent);color:#1e2926;font-size:1rem}
+.fine{font-size:.78rem;color:#6a7772;margin:12px 0 0;line-height:1.45}
+.status{margin-top:13px;padding:12px;border-radius:10px;background:#fff4e8;color:#754315;font-size:.88rem;display:none}
+footer{background:#0b1d1c;color:#dce7e1;padding:28px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer-brand{font-weight:850;letter-spacing:.08em;color:#fff}
+.contacts{display:flex;gap:25px;flex-wrap:wrap}.contacts a{text-decoration:none;color:#dce7e1}.contacts a:hover{color:#f2b778}
+
+.modal-backdrop{position:fixed;inset:0;background:rgba(5,20,19,.72);z-index:30;display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex}
+.modal{width:min(100%,470px);background:#fff;color:var(--ink);border-radius:22px;padding:26px;box-shadow:0 25px 80px rgba(0,0,0,.3);position:relative;max-height:calc(100dvh - 36px);overflow:auto}
+.modal-close{position:absolute;right:16px;top:14px;width:40px;height:40px;border:0;border-radius:50%;background:#edf2ee;color:#243330;font-size:1.35rem;cursor:pointer}
+.modal h2{font-size:1.8rem;margin:5px 48px 8px 0}
+.modal .small{color:var(--muted);font-size:.92rem;margin:0 0 20px}
+.modal .amount{font-size:2.2rem;margin:5px 0 15px}
+.modal .status{display:none}
+body.modal-open{overflow:hidden}
+
+@media(max-width:850px){.services{grid-template-columns:1fr 1fr}.booking-inner{grid-template-columns:1fr;gap:24px}.photo{height:195px}}
+@media(max-width:580px){.wrap{width:min(100% - 28px,1120px)}.nav{min-height:68px;flex-wrap:wrap;padding:10px 0}.langs button{padding:8px 10px;font-size:.8rem}.hero{padding:55px 0 42px}.section{padding:45px 0}.section-head{display:block}.section-head p{margin-top:8px}.services{grid-template-columns:1fr;gap:16px}.photo{height:215px}.service-body{padding:19px}.booking{padding:43px 0}.form-card{padding:21px}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}.contacts{flex-direction:column;gap:7px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="H Company home"><span class="mark">H</span><span>H COMPANY</span></a>
+    <nav class="langs" aria-label="Choose language">
+      <button type="button" data-lang="en" aria-pressed="true" onclick="applyLanguage('en')">English</button>
+      <button type="button" data-lang="kn" aria-pressed="false" onclick="applyLanguage('kn')">ಕನ್ನಡ</button>
+      <button type="button" data-lang="hi" aria-pressed="false" onclick="applyLanguage('hi')">हिन्दी</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="eyebrow" data-t="eyebrow">LOCAL SERVICES · TRUSTED SOLUTIONS</div>
+      <h1 data-t="headline">Work Done.<br>Problems Solved.</h1>
+      <p data-t="intro">Fabrication, electrical work and technology solutions — speak directly with us and we'll take it from there.</p>
+      <div class="hero-rule"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-t="servicesTitle">Our Services</h2>
+        <p data-t="servicesIntro">Choose what you need. Call us to discuss the work, or book after speaking with us.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=85" alt="Metal worker welding a steel fabrication project">
+            <span class="number">01</span>
+          </div>
+          <div class="service-body">
+            <h3 data-t="fabTitle">Fabrication & Welding</h3>
+            <p data-t="fabDesc">Welded gates, grills, railings, staircases, metal doors, custom fabrication and repair work.</p>
+            <div class="actions">
+              <a class="btn btn-call call-link" href="tel:+910000000000"><span>↗</span><span data-t="call">Call Now</span></a>
+              <button class="btn btn-book book-trigger" type="button" data-service="fab"><span data-t="book">Book Now</span><span>→</span></button>
+            </div>
+          </div>
+        </article>
+        <article class="service">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1000&q=85" alt="Electrician working on a home electrical installation">
+            <span class="number">02</span>
+          </div>
+          <div class="service-body">
+            <h3 data-t="elecTitle">Electrical Services</h3>
+            <p data-t="elecDesc">Small electrical issues, switches, connections, wiring, new home installations and complete electrical work.</p>
+            <div class="actions">
+              <a class="btn btn-call call-link" href="tel:+910000000000"><span>↗</span><span data-t="call">Call Now</span></a>
+              <button class="btn btn-book book-trigger" type="button" data-service="elec"><span data-t="book">Book Now</span><span>→</span></button>
+            </div>
+          </div>
+        </article>
+        <article class="service">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=85" alt="Technician working on electronic hardware at a repair bench">
+            <span class="number">03</span>
+          </div>
+          <div class="service-body">
+            <h3 data-t="techTitle">Technology Solutions</h3>
+            <p data-t="techDesc">Software and hardware troubleshooting, computer and laptop repairs, setup and technical consultation.</p>
+            <div class="actions">
+              <a class="btn btn-call call-link" href="tel:+910000000000"><span>↗</span><span data-t="call">Call Now</span></a>
+              <button class="btn btn-book book-trigger" type="button" data-service="tech"><span data-t="book">Book Now</span><span>→</span></button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <section class="modal">
+      <button class="modal-close" id="closeModal" type="button" aria-label="Close">×</button>
+      <div class="eyebrow" data-t="bookingEyebrow">AFTER SPEAKING WITH US</div>
+      <h2 id="modalTitle" data-t="bookingTitle">Confirm Your Booking</h2>
+      <p class="small" data-t="formIntro">Enter the name requested by our representative.</p>
+      <label for="customerName" data-t="nameLabel">Your Name</label>
+      <input id="customerName" type="text" maxlength="60" autocomplete="name" placeholder="Enter your name">
+      <div class="selected" style="margin-top:16px"><strong id="selectedName">Fabrication & Welding</strong></div>
+      <div class="small" data-t="bookingAmountLabel">Booking advance</div>
+      <div class="amount">₹149</div>
+      <button class="btn pay-btn" id="payButton" type="button"><span data-t="pay">Pay ₹149 via UPI</span><span>→</span></button>
+      <p class="fine" data-t="advanceNote">₹149 booking advance, adjusted against your final bill.</p>
+      <p class="fine" data-t="paymentFine">Your UPI app will open with the amount and booking details. Complete the payment there.</p>
+      <div class="status" id="status" role="status"></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">H COMPANY</div>
+    <div class="contacts">
+      <a id="footerPhone" href="tel:+910000000000">☎ <span data-t="phoneLabel">Phone</span>: +91 XXXXX XXXXX</a>
+      <a id="footerEmail" href="mailto:hello@example.com">✉ <span data-t="emailLabel">Email</span>: hello@example.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Replace these three values with the real H Company details before publishing. */
+const CONFIG = {
+  phone: "+91XXXXXXXXXX",
+  email: "your-email@example.com",
+  upiId: "your-upi-id@bank",
+  payeeName: "H Company"
+};
+
+const translations = {
+ en:{
+  eyebrow:"LOCAL SERVICES · TRUSTED SOLUTIONS",headline:"Work Done.<br>Problems Solved.",
+  intro:"Fabrication, electrical work and technology solutions — speak directly with us and we'll take it from there.",
+  servicesTitle:"Our Services",servicesIntro:"Choose what you need. Call us to discuss the work, or book after speaking with us.",
+  fabTitle:"Fabrication & Welding",fabDesc:"Welded gates, grills, railings, staircases, metal doors, custom fabrication and repair work.",
+  elecTitle:"Electrical Services",elecDesc:"Small electrical issues, switches, connections, wiring, new home installations and complete electrical work.",
+  techTitle:"Technology Solutions",techDesc:"Software and hardware troubleshooting, computer and laptop repairs, setup and technical consultation.",
+  call:"Call Now",book:"Book Now",bookingEyebrow:"AFTER SPEAKING WITH US",bookingTitle:"Confirm Your Booking",
+  bookingDesc:"Have you already spoken with us? Enter the name you gave our representative and pay the booking advance.",
+  advanceNote:"₹149 booking advance, adjusted against your final bill.",formIntro:"Enter the name requested by our representative.",
+  nameLabel:"Your Name",namePlaceholder:"Enter your name",selectedService:"Selected service",bookingAmountLabel:"Booking advance",
+  pay:"Pay ₹149 via UPI",paymentFine:"Your UPI app will open with the amount and booking details. Complete the payment there. A payment app return alone does not verify payment.",
+  phoneLabel:"Phone",emailLabel:"Email",chooseService:"Please select a service first.",enterName:"Please enter your name.",
+  configure:"H Company payment details have not been configured yet. Please contact us directly.",
+  opening:"Opening your UPI app. Complete the payment and keep the UPI transaction confirmation.",
+  serviceNames:{fab:"Fabrication & Welding",elec:"Electrical Services",tech:"Technology Solutions"}
+ },
+ kn:{
+  eyebrow:"ಸ್ಥಳೀಯ ಸೇವೆಗಳು · ನಂಬಿಕಾರ್ಹ ಪರಿಹಾರಗಳು",headline:"ಕೆಲಸ ಪೂರ್ಣ. ಸಮಸ್ಯೆಗೆ ಪರಿಹಾರ.",
+  intro:"ಫ್ಯಾಬ್ರಿಕೇಶನ್, ವಿದ್ಯುತ್ ಕೆಲಸ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ ಸೇವೆಗಳು — ನಮ್ಮೊಂದಿಗೆ ನೇರವಾಗಿ ಮಾತನಾಡಿ. ಮುಂದಿನದನ್ನು ನಾವು ನೋಡಿಕೊಳ್ಳುತ್ತೇವೆ.",
+  servicesTitle:"ನಮ್ಮ ಸೇವೆಗಳು",servicesIntro:"ನಿಮಗೆ ಬೇಕಾದ ಸೇವೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಕೆಲಸದ ಬಗ್ಗೆ ಮಾತನಾಡಲು ಕರೆ ಮಾಡಿ ಅಥವಾ ಮಾತನಾಡಿದ ನಂತರ ಬುಕ್ ಮಾಡಿ.",
+  fabTitle:"ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ವೆಲ್ಡಿಂಗ್",fabDesc:"ವೆಲ್ಡ್ ಗೇಟ್‌ಗಳು, ಗ್ರಿಲ್‌ಗಳು, ರೇಲಿಂಗ್‌ಗಳು, ಮೆಟ್ಟಿಲುಗಳು, ಲೋಹದ ಬಾಗಿಲುಗಳು, ಕಸ್ಟಮ್ ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ರಿಪೇರಿ.",
+  elecTitle:"ವಿದ್ಯುತ್ ಸೇವೆಗಳು",elecDesc:"ಸಣ್ಣ ವಿದ್ಯುತ್ ಸಮಸ್ಯೆಗಳು, ಸ್ವಿಚ್‌ಗಳು, ಸಂಪರ್ಕಗಳು, ವೈರಿಂಗ್, ಹೊಸ ಮನೆಯ ವಿದ್ಯುತ್ ಅಳವಡಿಕೆ ಮತ್ತು ಸಂಪೂರ್ಣ ವಿದ್ಯುತ್ ಕೆಲಸ.",
+  techTitle:"ತಂತ್ರಜ್ಞಾನ ಪರಿಹಾರಗಳು",techDesc:"ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ಹಾರ್ಡ್‌ವೇರ್ ಸಮಸ್ಯೆ ಪರಿಹಾರ, ಕಂಪ್ಯೂಟರ್ ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ರಿಪೇರಿ, ಸೆಟಪ್ ಮತ್ತು ತಾಂತ್ರಿಕ ಸಲಹೆ.",
+  call:"ಈಗ ಕರೆ ಮಾಡಿ",book:"ಈಗ ಬುಕ್ ಮಾಡಿ",bookingEyebrow:"ನಮ್ಮೊಂದಿಗೆ ಮಾತನಾಡಿದ ನಂತರ",bookingTitle:"ನಿಮ್ಮ ಬುಕ್ಕಿಂಗ್ ಖಚಿತಪಡಿಸಿ",
+  bookingDesc:"ನೀವು ಈಗಾಗಲೇ ನಮ್ಮೊಂದಿಗೆ ಮಾತನಾಡಿದ್ದೀರಾ? ನಮ್ಮ ಪ್ರತಿನಿಧಿಗೆ ತಿಳಿಸಿದ ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ ಮತ್ತು ಬುಕ್ಕಿಂಗ್ ಮುಂಗಡ ಪಾವತಿಸಿ.",
+  advanceNote:"₹149 ಬುಕ್ಕಿಂಗ್ ಮುಂಗಡ. ಈ ಮೊತ್ತವನ್ನು ಅಂತಿಮ ಬಿಲ್‌ನಲ್ಲಿ ಕಡಿತಗೊಳಿಸಲಾಗುತ್ತದೆ.",formIntro:"ನಮ್ಮ ಪ್ರತಿನಿಧಿ ಕೇಳಿದ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.",
+  nameLabel:"ನಿಮ್ಮ ಹೆಸರು",namePlaceholder:"ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ",selectedService:"ಆಯ್ಕೆ ಮಾಡಿದ ಸೇವೆ",bookingAmountLabel:"ಬುಕ್ಕಿಂಗ್ ಮುಂಗಡ",
+  pay:"UPI ಮೂಲಕ ₹149 ಪಾವತಿಸಿ",paymentFine:"ಮೊತ್ತ ಮತ್ತು ಬುಕ್ಕಿಂಗ್ ವಿವರಗಳೊಂದಿಗೆ ನಿಮ್ಮ UPI ಆ್ಯಪ್ ತೆರೆಯುತ್ತದೆ. ಅಲ್ಲಿ ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ. ಆ್ಯಪ್‌ಗೆ ಹಿಂತಿರುಗಿದಷ್ಟರಿಂದ ಪಾವತಿ ದೃಢೀಕರಣವಾಗುವುದಿಲ್ಲ.",
+  phoneLabel:"ಫೋನ್",emailLabel:"ಇಮೇಲ್",chooseService:"ದಯವಿಟ್ಟು ಮೊದಲು ಸೇವೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ.",enterName:"ದಯವಿಟ್ಟು ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.",
+  configure:"H Company ಪಾವತಿ ವಿವರಗಳನ್ನು ಇನ್ನೂ ಹೊಂದಿಸಲಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ನೇರವಾಗಿ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.",
+  opening:"ನಿಮ್ಮ UPI ಆ್ಯಪ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ. ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ ಮತ್ತು UPI ವಹಿವಾಟಿನ ದೃಢೀಕರಣವನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ.",
+  serviceNames:{fab:"ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ವೆಲ್ಡಿಂಗ್",elec:"ವಿದ್ಯುತ್ ಸೇವೆಗಳು",tech:"ತಂತ್ರಜ್ಞಾನ ಪರಿಹಾರಗಳು"}
+ },
+ hi:{
+  eyebrow:"स्थानीय सेवाएँ · भरोसेमंद समाधान",headline:"काम पूरा। समस्या हल।",
+  intro:"फैब्रिकेशन, इलेक्ट्रिकल काम और टेक्नोलॉजी सेवाएँ — सीधे हमसे बात करें, आगे की ज़िम्मेदारी हमारी।",
+  servicesTitle:"हमारी सेवाएँ",servicesIntro:"अपनी ज़रूरत की सेवा चुनें। काम के बारे में बात करने के लिए कॉल करें या बात करने के बाद बुक करें।",
+  fabTitle:"फैब्रिकेशन और वेल्डिंग",fabDesc:"वेल्डेड गेट, ग्रिल, रेलिंग, सीढ़ियाँ, धातु के दरवाज़े, कस्टम फैब्रिकेशन और मरम्मत।",
+  elecTitle:"इलेक्ट्रिकल सेवाएँ",elecDesc:"छोटी इलेक्ट्रिकल समस्याएँ, स्विच, कनेक्शन, वायरिंग, नए घर की इलेक्ट्रिकल फिटिंग और पूरा इलेक्ट्रिकल काम।",
+  techTitle:"टेक्नोलॉजी समाधान",techDesc:"सॉफ्टवेयर और हार्डवेयर की समस्या, कंप्यूटर और लैपटॉप रिपेयर, सेटअप और तकनीकी सलाह।",
+  call:"अभी कॉल करें",book:"अभी बुक करें",bookingEyebrow:"हमसे बात करने के बाद",bookingTitle:"अपनी बुकिंग पक्की करें",
+  bookingDesc:"क्या आपने हमसे बात कर ली है? हमारे प्रतिनिधि को बताया गया अपना नाम दर्ज करें और बुकिंग एडवांस का भुगतान करें।",
+  advanceNote:"₹149 बुकिंग एडवांस। यह राशि आपके अंतिम बिल में समायोजित होगी।",formIntro:"हमारे प्रतिनिधि द्वारा पूछा गया नाम दर्ज करें।",
+  nameLabel:"आपका नाम",namePlaceholder:"अपना नाम दर्ज करें",selectedService:"चुनी गई सेवा",bookingAmountLabel:"बुकिंग एडवांस",
+  pay:"UPI से ₹149 भुगतान करें",paymentFine:"राशि और बुकिंग विवरण के साथ आपका UPI ऐप खुलेगा। वहाँ भुगतान पूरा करें। केवल वेबसाइट पर वापस आने से भुगतान की पुष्टि नहीं होती।",
+  phoneLabel:"फ़ोन",emailLabel:"ईमेल",chooseService:"कृपया पहले एक सेवा चुनें।",enterName:"कृपया अपना नाम दर्ज करें।",
+  configure:"H Company के भुगतान विवरण अभी सेट नहीं किए गए हैं। कृपया सीधे हमसे संपर्क करें।",
+  opening:"आपका UPI ऐप खुल रहा है। भुगतान पूरा करें और UPI लेन-देन की पुष्टि संभालकर रखें।",
+  serviceNames:{fab:"फैब्रिकेशन और वेल्डिंग",elec:"इलेक्ट्रिकल सेवाएँ",tech:"टेक्नोलॉजी समाधान"}
+ }
+};
+
+let currentLang="en", selectedService="";
+const $=id=>document.getElementById(id);
+function applyLanguage(lang){
+ currentLang=translations[lang]?lang:"en";
+ document.documentElement.lang=currentLang;
+ const dict=translations[currentLang];
+ document.querySelectorAll("[data-t]").forEach(node=>{
+   const key=node.getAttribute("data-t");
+   if(Object.prototype.hasOwnProperty.call(dict,key)) node.innerHTML=dict[key];
+ });
+ const nameInput=$("customerName");
+ if(nameInput) nameInput.placeholder=dict.namePlaceholder;
+ document.querySelectorAll("[data-lang]").forEach(b=>{
+   b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===currentLang));
+ });
+ if(typeof setContactDetails==="function") setContactDetails();
+ try{window.localStorage.setItem("hcompany-language",currentLang)}catch(e){}
+}
+window.applyLanguage=applyLanguage;
+document.querySelectorAll("[data-lang]").forEach(b=>{
+ b.addEventListener("click",function(){applyLanguage(this.getAttribute("data-lang"))});
+});
+let initialLanguage="en";
+try{initialLanguage=window.localStorage.getItem("hcompany-language")||"en"}catch(e){}
+applyLanguage(initialLanguage);
+
+function openBooking(key){
+ selectedService=key;
+ $("selectedName").textContent=translations[currentLang].serviceNames[key];
+ $("bookingModal").classList.add("open");
+ document.body.classList.add("modal-open");
+ $("status").style.display="none";
+ $("customerName").value="";
+ setTimeout(()=>$("customerName").focus(),100);
+}
+function closeBooking(){
+ $("bookingModal").classList.remove("open");
+ document.body.classList.remove("modal-open");
+}
+document.querySelectorAll(".book-trigger").forEach(b=>b.addEventListener("click",()=>openBooking(b.dataset.service)));
+$("closeModal").addEventListener("click",closeBooking);
+$("bookingModal").addEventListener("click",e=>{if(e.target===$("bookingModal"))closeBooking()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeBooking()});
+
+function setContactDetails(){
+ const phone=CONFIG.phone.replace(/[^\d+]/g,"");
+ document.querySelectorAll(".call-link").forEach(a=>a.href="tel:"+phone);
+ $("footerPhone").href="tel:"+phone;
+ $("footerPhone").innerHTML="☎ "+translations[currentLang].phoneLabel+": "+CONFIG.phone;
+ $("footerEmail").href="mailto:"+CONFIG.email;
+ $("footerEmail").innerHTML="✉ "+translations[currentLang].emailLabel+": "+CONFIG.email;
+}
+setContactDetails();
+
+$("payButton").addEventListener("click",()=>{
+ const t=translations[currentLang], name=$("customerName").value.trim();
+ if(!selectedService){alert(t.chooseService);return}
+ if(name.length<2){alert(t.enterName);$("customerName").focus();return}
+ if(CONFIG.phone.includes("X")||CONFIG.upiId.includes("your-upi")||CONFIG.email.includes("example")){
+   alert(t.configure);return;
+ }
+ const note=("H Company booking - "+name+" - "+translations.en.serviceNames[selectedService]).slice(0,80);
+ const upi="upi://pay?"+new URLSearchParams({
+   pa:CONFIG.upiId,pn:CONFIG.payeeName,am:"149.00",cu:"INR",tn:note
+ }).toString();
+ $("status").style.display="block";
+ $("status").textContent=t.opening;
+ window.location.href=upi;
+});
+</script>
+</body>
+</html>
