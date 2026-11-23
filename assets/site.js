@@ -1,14 +1,11 @@
 const translations = {
   "en": {
-    "viewServices": "Explore services",
-    "servicesTitle": "Find the right team.",
-    "servicesIntro": "Start with the work you need or ask about electrical parts and availability.",
     "fabTitle": "Fabrication & Welding",
-    "fabDesc": "Custom gates, grilles, railings, staircases and metal doors. Welding and repairs for existing metalwork.",
+    "fabDesc": "Gates, grilles, railings, staircases, metal doors, welding and repairs.",
     "elecTitle": "Electrical & Supplies",
-    "elecDesc": "Wiring, fault finding and new installations. Ask us about switches, cables, boards, fittings and electrical spare parts.",
+    "elecDesc": "Wiring and installations, switches, cables, boards, fittings and appliance spares.",
     "techTitle": "Technology Support",
-    "techDesc": "Laptop and desktop repairs, hardware and software troubleshooting, setup and technical advice.",
+    "techDesc": "Computer and laptop repairs, hardware, software and technical support.",
     "call": "Call Now",
     "contactPending": "Contact details coming soon.",
     "book": "Book consultation",
@@ -36,45 +33,19 @@ const translations = {
     "configure": "UPI payment is not available yet.",
     "opening": "Opening your UPI app. Complete the payment and keep the UPI transaction confirmation.",
     "skip": "Skip to content",
-    "navServices": "Services",
-    "navSupplies": "Electrical supplies",
     "language": "Language",
-    "enquire": "Enquire",
-    "heroKicker": "FABRICATION / ELECTRICAL / TECHNOLOGY",
-    "headlineA": "What needs",
-    "headlineB": "doing?",
-    "heroIntro": "A custom gate, a wiring job, or a laptop that won’t start. Tell us what you need and we’ll take it from there.",
-    "startEnquiry": "Start an enquiry",
-    "serviceIndex": "01 / SERVICE INDEX",
-    "supplyIndex": "02 / ELECTRICAL SUPPLIES",
-    "suppliesTitle": "Parts for the whole job.",
-    "suppliesIntro": "Tell us the part, rating or model you need and we’ll help you check availability.",
-    "partsEnquiry": "Enquire about parts",
-    "partsWiring": "Wires, cables & conduits",
-    "partsSwitches": "Switches, sockets & switchboards",
-    "partsProtection": "Circuit breakers, fuses & distribution boards",
-    "partsAccessories": "Lighting, fittings & electrical accessories",
-    "partsAppliance": "Appliance spares & replacement parts",
-    "enquiryIndex": "03 / GET IN TOUCH",
-    "enquiryTitle": "Tell us what you need.",
-    "enquiryIntro": "Choose a service and tell us a little about the job. You can call the team or open an email draft to send.",
-    "consultationNote": "Enquiring is free. If you decide to book after speaking with us, the consultation charge is ₹149 and is non-refundable.",
-    "selectService": "Choose a service",
-    "detailsLabel": "What do you need? (optional)",
-    "emailEnquiry": "Open email draft",
-    "enquirySubject": "Enquiry",
-    "close": "Close"
+    "close": "Close",
+    "heroTitle": "Talk to the right team.",
+    "heroIntro": "Choose a service and call us about your work. Book a consultation after your call.",
+    "footerText": "Fabrication, electrical & technology"
   },
   "kn": {
-    "viewServices": "ಸೇವೆಗಳನ್ನು ನೋಡಿ",
-    "servicesTitle": "ಸರಿಯಾದ ಸೇವೆಯನ್ನು ಆರಿಸಿ.",
-    "servicesIntro": "ನಿಮಗೆ ಬೇಕಾದ ಕೆಲಸ ಅಥವಾ ವಿದ್ಯುತ್ ಭಾಗಗಳ ಲಭ್ಯತೆ ಬಗ್ಗೆ ವಿಚಾರಿಸಿ.",
     "fabTitle": "ಫ್ಯಾಬ್ರಿಕೇಶನ್ ಮತ್ತು ವೆಲ್ಡಿಂಗ್",
-    "fabDesc": "ಕಸ್ಟಮ್ ಗೇಟ್‌ಗಳು, ಗ್ರಿಲ್‌ಗಳು, ರೇಲಿಂಗ್‌ಗಳು, ಮೆಟ್ಟಿಲುಗಳು ಮತ್ತು ಲೋಹದ ಬಾಗಿಲುಗಳು. ವೆಲ್ಡಿಂಗ್ ಮತ್ತು ದುರಸ್ತಿ.",
+    "fabDesc": "ಗೇಟ್‌ಗಳು, ಗ್ರಿಲ್‌ಗಳು, ರೇಲಿಂಗ್‌ಗಳು, ಮೆಟ್ಟಿಲುಗಳು, ಲೋಹದ ಬಾಗಿಲುಗಳು, ವೆಲ್ಡಿಂಗ್ ಮತ್ತು ದುರಸ್ತಿ.",
     "elecTitle": "ವಿದ್ಯುತ್ ಸೇವೆಗಳು ಮತ್ತು ಸಾಮಗ್ರಿಗಳು",
-    "elecDesc": "ವೈರಿಂಗ್, ದೋಷ ಪತ್ತೆ ಮತ್ತು ಹೊಸ ಅಳವಡಿಕೆ. ಸ್ವಿಚ್‌ಗಳು, ಕೇಬಲ್‌ಗಳು, ಬೋರ್ಡ್‌ಗಳು, ಫಿಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ಬಿಡಿಭಾಗಗಳ ಬಗ್ಗೆ ವಿಚಾರಿಸಿ.",
+    "elecDesc": "ವೈರಿಂಗ್, ಅಳವಡಿಕೆ, ಸ್ವಿಚ್‌ಗಳು, ಕೇಬಲ್‌ಗಳು, ಬೋರ್ಡ್‌ಗಳು, ಫಿಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ಉಪಕರಣಗಳ ಬಿಡಿಭಾಗಗಳು.",
     "techTitle": "ತಂತ್ರಜ್ಞಾನ ಬೆಂಬಲ",
-    "techDesc": "ಲ್ಯಾಪ್‌ಟಾಪ್ ಮತ್ತು ಡೆಸ್ಕ್‌ಟಾಪ್ ದುರಸ್ತಿ, ಹಾರ್ಡ್‌ವೇರ್ ಮತ್ತು ಸಾಫ್ಟ್‌ವೇರ್ ಸಮಸ್ಯೆ ಪರಿಹಾರ, ಸೆಟಪ್ ಮತ್ತು ಸಲಹೆ.",
+    "techDesc": "ಕಂಪ್ಯೂಟರ್ ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ದುರಸ್ತಿ, ಹಾರ್ಡ್‌ವೇರ್, ಸಾಫ್ಟ್‌ವೇರ್ ಮತ್ತು ತಾಂತ್ರಿಕ ಬೆಂಬಲ.",
     "call": "ಈಗ ಕರೆ ಮಾಡಿ",
     "contactPending": "ಸಂಪರ್ಕ ವಿವರಗಳು ಶೀಘ್ರದಲ್ಲೇ ಲಭ್ಯವಾಗುತ್ತವೆ.",
     "book": "ಸಮಾಲೋಚನೆ ಬುಕ್ ಮಾಡಿ",
@@ -102,45 +73,19 @@ const translations = {
     "configure": "UPI ಪಾವತಿ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ.",
     "opening": "ನಿಮ್ಮ UPI ಆ್ಯಪ್ ತೆರೆಯಲಾಗುತ್ತಿದೆ. ಪಾವತಿ ಪೂರ್ಣಗೊಳಿಸಿ ಮತ್ತು UPI ವಹಿವಾಟಿನ ದೃಢೀಕರಣವನ್ನು ಉಳಿಸಿಕೊಳ್ಳಿ.",
     "skip": "ವಿಷಯಕ್ಕೆ ಹೋಗಿ",
-    "navServices": "ಸೇವೆಗಳು",
-    "navSupplies": "ವಿದ್ಯುತ್ ಸಾಮಗ್ರಿಗಳು",
     "language": "ಭಾಷೆ",
-    "enquire": "ವಿಚಾರಿಸಿ",
-    "heroKicker": "ಫ್ಯಾಬ್ರಿಕೇಶನ್ / ವಿದ್ಯುತ್ / ತಂತ್ರಜ್ಞಾನ",
-    "headlineA": "ಏನು ಕೆಲಸ",
-    "headlineB": "ಮಾಡಬೇಕು?",
-    "heroIntro": "ಕಸ್ಟಮ್ ಗೇಟ್, ವೈರಿಂಗ್ ಕೆಲಸ ಅಥವಾ ಚಾಲನೆಯಾಗದ ಲ್ಯಾಪ್‌ಟಾಪ್ — ನಿಮಗೆ ಏನು ಬೇಕೆಂದು ತಿಳಿಸಿ.",
-    "startEnquiry": "ವಿಚಾರಣೆ ಆರಂಭಿಸಿ",
-    "serviceIndex": "01 / ಸೇವೆಗಳ ಪಟ್ಟಿ",
-    "supplyIndex": "02 / ವಿದ್ಯುತ್ ಸಾಮಗ್ರಿಗಳು",
-    "suppliesTitle": "ಕೆಲಸಕ್ಕೆ ಬೇಕಾದ ಬಿಡಿಭಾಗಗಳು.",
-    "suppliesIntro": "ಬೇಕಾದ ಭಾಗ, ರೇಟಿಂಗ್ ಅಥವಾ ಮಾದರಿಯನ್ನು ತಿಳಿಸಿ. ಲಭ್ಯತೆ ಪರಿಶೀಲಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.",
-    "partsEnquiry": "ಬಿಡಿಭಾಗಗಳ ಬಗ್ಗೆ ವಿಚಾರಿಸಿ",
-    "partsWiring": "ತಂತಿ, ಕೇಬಲ್ ಮತ್ತು ಕಂಡ್ಯೂಟ್‌ಗಳು",
-    "partsSwitches": "ಸ್ವಿಚ್‌ಗಳು, ಸಾಕೆಟ್‌ಗಳು ಮತ್ತು ಸ್ವಿಚ್‌ಬೋರ್ಡ್‌ಗಳು",
-    "partsProtection": "ಸರ್ಕ್ಯೂಟ್ ಬ್ರೇಕರ್‌ಗಳು, ಫ್ಯೂಸ್‌ಗಳು ಮತ್ತು ವಿತರಣಾ ಬೋರ್ಡ್‌ಗಳು",
-    "partsAccessories": "ದೀಪಗಳು, ಫಿಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ವಿದ್ಯುತ್ ಪರಿಕರಗಳು",
-    "partsAppliance": "ಉಪಕರಣಗಳ ಬಿಡಿಭಾಗಗಳು ಮತ್ತು ಬದಲಿ ಭಾಗಗಳು",
-    "enquiryIndex": "03 / ಸಂಪರ್ಕಿಸಿ",
-    "enquiryTitle": "ನಿಮಗೆ ಏನು ಬೇಕೆಂದು ತಿಳಿಸಿ.",
-    "enquiryIntro": "ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಕೆಲಸದ ಬಗ್ಗೆ ತಿಳಿಸಿ. ಕರೆ ಮಾಡಿ ಅಥವಾ ಕಳುಹಿಸಲು ಇಮೇಲ್ ಕರಡು ತೆರೆಯಿರಿ.",
-    "consultationNote": "ವಿಚಾರಣೆ ಉಚಿತ. ಮಾತನಾಡಿದ ನಂತರ ಬುಕ್ ಮಾಡಿದರೆ ಸಮಾಲೋಚನೆ ಶುಲ್ಕ ₹149; ಮರುಪಾವತಿ ಇಲ್ಲ.",
-    "selectService": "ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ",
-    "detailsLabel": "ನಿಮಗೆ ಏನು ಬೇಕು? (ಐಚ್ಛಿಕ)",
-    "emailEnquiry": "ಇಮೇಲ್ ಕರಡು ತೆರೆಯಿರಿ",
-    "enquirySubject": "ವಿಚಾರಣೆ",
-    "close": "ಮುಚ್ಚಿ"
+    "close": "ಮುಚ್ಚಿ",
+    "heroTitle": "ಸರಿಯಾದ ತಂಡದೊಂದಿಗೆ ಮಾತನಾಡಿ.",
+    "heroIntro": "ಸೇವೆ ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಕೆಲಸದ ಬಗ್ಗೆ ಕರೆ ಮಾಡಿ. ಮಾತನಾಡಿದ ನಂತರ ಸಮಾಲೋಚನೆ ಬುಕ್ ಮಾಡಿ.",
+    "footerText": "ಫ್ಯಾಬ್ರಿಕೇಶನ್, ವಿದ್ಯುತ್ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ"
   },
   "hi": {
-    "viewServices": "सेवाएँ देखें",
-    "servicesTitle": "सही टीम चुनें।",
-    "servicesIntro": "अपने काम के बारे में बताएँ या बिजली के पुर्जों की उपलब्धता पूछें।",
     "fabTitle": "फैब्रिकेशन और वेल्डिंग",
-    "fabDesc": "कस्टम गेट, ग्रिल, रेलिंग, सीढ़ियाँ और धातु के दरवाज़े। वेल्डिंग और मरम्मत भी।",
+    "fabDesc": "गेट, ग्रिल, रेलिंग, सीढ़ियाँ, धातु के दरवाज़े, वेल्डिंग और मरम्मत।",
     "elecTitle": "इलेक्ट्रिकल सेवाएँ और सामान",
-    "elecDesc": "वायरिंग, खराबी की जाँच और नई फिटिंग। स्विच, केबल, बोर्ड, फिटिंग और बिजली के पुर्जों के बारे में पूछें।",
+    "elecDesc": "वायरिंग और फिटिंग, स्विच, केबल, बोर्ड और उपकरणों के स्पेयर पार्ट्स।",
     "techTitle": "टेक्नोलॉजी सहायता",
-    "techDesc": "लैपटॉप और डेस्कटॉप की मरम्मत, हार्डवेयर और सॉफ्टवेयर की समस्याएँ, सेटअप और तकनीकी सलाह।",
+    "techDesc": "कंप्यूटर और लैपटॉप की मरम्मत, हार्डवेयर, सॉफ्टवेयर और तकनीकी सहायता।",
     "call": "अभी कॉल करें",
     "contactPending": "संपर्क विवरण जल्द उपलब्ध होंगे।",
     "book": "परामर्श बुक करें",
@@ -168,34 +113,11 @@ const translations = {
     "configure": "UPI भुगतान अभी उपलब्ध नहीं है।",
     "opening": "आपका UPI ऐप खुल रहा है। भुगतान पूरा करें और UPI लेन-देन की पुष्टि संभालकर रखें।",
     "skip": "मुख्य सामग्री पर जाएँ",
-    "navServices": "सेवाएँ",
-    "navSupplies": "बिजली का सामान",
     "language": "भाषा",
-    "enquire": "पूछताछ करें",
-    "heroKicker": "फैब्रिकेशन / इलेक्ट्रिकल / टेक्नोलॉजी",
-    "headlineA": "क्या काम",
-    "headlineB": "कराना है?",
-    "heroIntro": "कस्टम गेट, वायरिंग या चालू न होने वाला लैपटॉप — हमें बताएँ कि आपको क्या चाहिए।",
-    "startEnquiry": "पूछताछ शुरू करें",
-    "serviceIndex": "01 / सेवाओं की सूची",
-    "supplyIndex": "02 / बिजली का सामान",
-    "suppliesTitle": "पूरे काम के लिए पुर्जे।",
-    "suppliesIntro": "पुर्जे का नाम, रेटिंग या मॉडल बताएँ। हम उपलब्धता जाँचने में मदद करेंगे।",
-    "partsEnquiry": "पुर्जों के बारे में पूछें",
-    "partsWiring": "तार, केबल और कंड्यूट",
-    "partsSwitches": "स्विच, सॉकेट और स्विचबोर्ड",
-    "partsProtection": "सर्किट ब्रेकर, फ़्यूज़ और डिस्ट्रीब्यूशन बोर्ड",
-    "partsAccessories": "लाइट, फिटिंग और बिजली के उपकरण",
-    "partsAppliance": "उपकरणों के स्पेयर और बदली के पुर्जे",
-    "enquiryIndex": "03 / संपर्क करें",
-    "enquiryTitle": "हमें अपनी ज़रूरत बताएँ।",
-    "enquiryIntro": "सेवा चुनें और काम के बारे में थोड़ा बताएँ। टीम को कॉल करें या भेजने के लिए ईमेल ड्राफ़्ट खोलें।",
-    "consultationNote": "पूछताछ मुफ़्त है। बातचीत के बाद बुक करने पर परामर्श शुल्क ₹149 है, जो वापस नहीं होगा।",
-    "selectService": "सेवा चुनें",
-    "detailsLabel": "आपको क्या चाहिए? (वैकल्पिक)",
-    "emailEnquiry": "ईमेल ड्राफ़्ट खोलें",
-    "enquirySubject": "पूछताछ",
-    "close": "बंद करें"
+    "close": "बंद करें",
+    "heroTitle": "सही टीम से बात करें।",
+    "heroIntro": "सेवा चुनें और अपने काम के बारे में कॉल करें। बातचीत के बाद परामर्श बुक करें।",
+    "footerText": "फैब्रिकेशन, इलेक्ट्रिकल और टेक्नोलॉजी"
   }
 };
 
@@ -222,27 +144,21 @@ function paymentSettings(service) {
   return upi || qr ? { upi, qr } : { upi: setting("upi"), qr: setting("upi-qr") };
 }
 
-function updateEnquiry() {
-  const service = $("enquiryService").value;
-  const phone = contactPhone(service);
-  const email = setting("email");
-  const validEmail = /^[^\s@?&#%]+@[^\s@?&#%]+\.[^\s@?&#%]+$/.test(email);
-  const number = $("enquiryNumber");
-  const phoneLink = $("enquiryPhone");
-  const emailLink = $("enquiryEmail");
-  phoneLink.hidden = number.hidden = !phone;
-  number.textContent = phone;
-  if (phone) phoneLink.href = `tel:${phone}`;
-  else phoneLink.removeAttribute("href");
-  emailLink.hidden = !validEmail;
-  if (validEmail) {
-    const params = new URLSearchParams({
-      subject: `H Company · ${copy().enquirySubject}: ${serviceName(service)}`,
-      body: $("enquiryDetails").value.trim()
-    });
-    emailLink.href = `mailto:${encodeURIComponent(email).replace("%40", "@")}?${params.toString().replace(/\+/g, "%20")}`;
-  } else emailLink.removeAttribute("href");
-  $("enquiryUnavailable").hidden = Boolean(phone || validEmail);
+function updateCalls() {
+  document.querySelectorAll("[data-call]").forEach(link => {
+    const service = link.dataset.call;
+    const phone = contactPhone(service);
+    link.setAttribute("aria-disabled", String(!phone));
+    if (phone) {
+      link.href = `tel:${phone}`;
+      link.querySelector(".phone-value").textContent = phone;
+      link.setAttribute("aria-label", `${copy().call} ${serviceName(service)}: ${phone}`);
+    } else {
+      link.removeAttribute("href");
+      link.removeAttribute("aria-label");
+      link.querySelector(".phone-value").textContent = copy().contactPending;
+    }
+  });
 }
 
 function applyLanguage(value) {
@@ -256,7 +172,7 @@ function applyLanguage(value) {
   $("customerName").placeholder = copy().namePlaceholder;
   $("qrImage").alt = copy().qrAlt;
   $("closeModal").setAttribute("aria-label", copy().close);
-  updateEnquiry();
+  updateCalls();
   try { localStorage.setItem("hcompany-language", language); } catch {}
 }
 
@@ -325,13 +241,6 @@ function bookingName() {
   return "";
 }
 
-document.querySelectorAll("[data-enquire]").forEach(link => link.addEventListener("click", () => {
-  $("enquiryService").value = link.dataset.enquire;
-  updateEnquiry();
-  $("enquiryService").focus({preventScroll: true});
-}));
-$("enquiryService").addEventListener("change", updateEnquiry);
-$("enquiryDetails").addEventListener("input", updateEnquiry);
 $("languageSelect").addEventListener("change", event => applyLanguage(event.target.value));
 
 document.querySelectorAll(".book-trigger").forEach(button => button.addEventListener("click", () => openBooking(button)));

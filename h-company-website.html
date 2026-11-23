@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#1735d7">
+<meta name="theme-color" content="#253e4a">
 <!-- Shared defaults. Keep these unless your business details change. -->
 <meta name="hcompany-phone" content="+919535194779">
 <meta name="hcompany-email" content="masalaoats69@gmail.com">
@@ -19,9 +19,9 @@
 <meta name="hcompany-tech-phone" content="">
 <meta name="hcompany-tech-upi" content="">
 <meta name="hcompany-tech-qr" content="">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self' 'sha256-81QM8O5WE6CDy5ez7wRlYHsJ6xwO+nFBIHWDu4o9vGk='; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-81QM8O5WE6CDy5ez7wRlYHsJ6xwO+nFBIHWDu4o9vGk='; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="Enquire with H Company about metal fabrication, electrical work and supplies, and computer and technology support.">
+<meta name="description" content="Call H Company for fabrication and welding, electrical work and supplies, and technology support.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="H Company | Fabrication, Electrical &amp; Technology">
 <meta property="og:description" content="Find the right team for metalwork, electrical services and supplies, or technology support.">
@@ -36,85 +36,39 @@
 <a class="skip-link" href="#main" data-t="skip">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="brand" href="#top" aria-label="H Company home"><span class="brand-mark" aria-hidden="true">H<span>.</span></span><span>H COMPANY</span></a>
-    <nav class="primary-nav" aria-label="Primary">
-      <a href="#services" data-t="navServices">Services</a>
-      <a href="#supplies" data-t="navSupplies">Electrical supplies</a>
-    </nav>
-    <div class="header-tools">
-      <label class="language"><span class="visually-hidden" data-t="language">Language</span><select id="languageSelect"><option value="en" lang="en">English</option><option value="kn" lang="kn">ಕನ್ನಡ</option><option value="hi" lang="hi">हिन्दी</option></select></label>
-      <a class="button button-dark header-enquire" href="#enquiry"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a>
-    </div>
+    <a class="brand" href="#top" aria-label="H Company home"><span class="brand-name">H <span>Company</span></span></a>
+    <label class="language"><span class="visually-hidden" data-t="language">Language</span><select id="languageSelect"><option value="en" lang="en">English</option><option value="kn" lang="kn">ಕನ್ನಡ</option><option value="hi" lang="hi">हिन्दी</option></select></label>
   </div>
 </header>
 <main id="main">
-  <section class="hero wrap" aria-labelledby="hero-title">
-    <div class="hero-content">
-      <p class="kicker"><span aria-hidden="true"></span><span data-t="heroKicker">FABRICATION / ELECTRICAL / TECHNOLOGY</span></p>
-      <h1 id="hero-title"><span data-t="headlineA">What needs</span> <em data-t="headlineB">doing?</em></h1>
-      <p class="hero-intro" data-t="heroIntro">A custom gate, a wiring job, or a laptop that won’t start. Tell us what you need and we’ll take it from there.</p>
-      <div class="hero-actions">
-        <a class="button button-lime" href="#enquiry"><span data-t="startEnquiry">Start an enquiry</span><span aria-hidden="true">↗</span></a>
-        <a class="hero-link" href="#services"><span data-t="viewServices">Explore services</span><span aria-hidden="true">↓</span></a>
-      </div>
+  <section class="intro wrap" aria-labelledby="hero-title">
+    <div class="intro-inner">
+      <h1 id="hero-title" data-t="heroTitle">Talk to the right team.</h1>
+      <p data-t="heroIntro">Choose a service and call us about your work. Book a consultation after your call.</p>
     </div>
-    <figure class="hero-photo">
-      <img src="/assets/fabrication.webp" alt="Welder working on a steel frame in a workshop" fetchpriority="high">
-      <figcaption><span aria-hidden="true">01 / 03</span><span data-t="fabTitle">Fabrication &amp; Welding</span></figcaption>
-    </figure>
   </section>
-
-  <section class="wrap section" id="services" aria-labelledby="services-title">
-    <div class="section-head"><div><p class="kicker" data-t="serviceIndex">01 / SERVICE INDEX</p><h2 id="services-title" data-t="servicesTitle">Find the right team.</h2></div><p data-t="servicesIntro">Start with the work you need or ask about electrical parts and availability.</p></div>
+  <section class="wrap services-section" id="services" aria-label="Services">
     <div class="services">
-      <article class="service">
-        <div class="service-image"><img src="/assets/fabrication.webp" loading="lazy" decoding="async" alt="Steel frame being welded"><span aria-hidden="true">01</span></div>
-        <div class="service-body"><h3 data-t="fabTitle">Fabrication &amp; Welding</h3><p data-t="fabDesc">Custom gates, grilles, railings, staircases and metal doors. Welding and repairs for existing metalwork.</p>
-          <div class="service-actions"><a class="button button-dark" href="#enquiry" data-enquire="fab"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a><button class="text-button book-trigger" data-service="fab" type="button" data-t="book">Book consultation</button></div>
-        </div>
+      <article class="service" aria-labelledby="fab-title">
+        <div class="service-image"><img src="/assets/fabrication.webp" alt="Steel frame being welded" fetchpriority="high"></div>
+        <div class="service-body"><h2 id="fab-title" data-t="fabTitle">Fabrication &amp; Welding</h2><p data-t="fabDesc">Gates, grilles, railings, staircases, metal doors, welding and repairs.</p></div>
+        <div class="service-actions"><a class="call-button" data-call="fab" aria-disabled="true"><span data-t="call">Call Now</span><span class="phone-value"></span></a><button class="book-trigger" data-service="fab" type="button" data-t="book">Book consultation</button></div>
       </article>
-      <article class="service">
-        <div class="service-image"><img src="/assets/electrical.webp" loading="lazy" decoding="async" alt="Wiring and circuit breakers in an electrical panel"><span aria-hidden="true">02</span></div>
-        <div class="service-body"><h3 data-t="elecTitle">Electrical &amp; Supplies</h3><p data-t="elecDesc">Wiring, fault finding and new installations. Ask us about switches, cables, boards, fittings and electrical spare parts.</p>
-          <div class="service-actions"><a class="button button-dark" href="#enquiry" data-enquire="elec"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a><button class="text-button book-trigger" data-service="elec" type="button" data-t="book">Book consultation</button></div>
-        </div>
+      <article class="service" aria-labelledby="elec-title">
+        <div class="service-image"><img src="/assets/electrical.webp" loading="lazy" decoding="async" alt="Wiring and circuit breakers in an electrical panel"></div>
+        <div class="service-body"><h2 id="elec-title" data-t="elecTitle">Electrical &amp; Supplies</h2><p data-t="elecDesc">Wiring and installations, switches, cables, boards, fittings and appliance spares.</p></div>
+        <div class="service-actions"><a class="call-button" data-call="elec" aria-disabled="true"><span data-t="call">Call Now</span><span class="phone-value"></span></a><button class="book-trigger" data-service="elec" type="button" data-t="book">Book consultation</button></div>
       </article>
-      <article class="service">
-        <div class="service-image"><img src="/assets/technology.webp" loading="lazy" decoding="async" alt="Hands working on an open desktop computer"><span aria-hidden="true">03</span></div>
-        <div class="service-body"><h3 data-t="techTitle">Technology Support</h3><p data-t="techDesc">Laptop and desktop repairs, hardware and software troubleshooting, setup and technical advice.</p>
-          <div class="service-actions"><a class="button button-dark" href="#enquiry" data-enquire="tech"><span data-t="enquire">Enquire</span><span aria-hidden="true">↗</span></a><button class="text-button book-trigger" data-service="tech" type="button" data-t="book">Book consultation</button></div>
-        </div>
+      <article class="service" aria-labelledby="tech-title">
+        <div class="service-image"><img src="/assets/technology.webp" loading="lazy" decoding="async" alt="Hands working on an open desktop computer"></div>
+        <div class="service-body"><h2 id="tech-title" data-t="techTitle">Technology Support</h2><p data-t="techDesc">Computer and laptop repairs, hardware, software and technical support.</p></div>
+        <div class="service-actions"><a class="call-button" data-call="tech" aria-disabled="true"><span data-t="call">Call Now</span><span class="phone-value"></span></a><button class="book-trigger" data-service="tech" type="button" data-t="book">Book consultation</button></div>
       </article>
-    </div>
-  </section>
-
-  <section class="wrap supply" id="supplies" aria-labelledby="supplies-title">
-    <div><p class="kicker" data-t="supplyIndex">02 / ELECTRICAL SUPPLIES</p><h2 id="supplies-title" data-t="suppliesTitle">Parts for the whole job.</h2><p data-t="suppliesIntro">Tell us the part, rating or model you need and we’ll help you check availability.</p><a class="button button-dark" href="#enquiry" data-enquire="elec"><span data-t="partsEnquiry">Enquire about parts</span><span aria-hidden="true">↗</span></a></div>
-    <ul class="parts-list"><li data-t="partsWiring">Wires, cables &amp; conduits</li><li data-t="partsSwitches">Switches, sockets &amp; switchboards</li><li data-t="partsProtection">Circuit breakers, fuses &amp; distribution boards</li><li data-t="partsAccessories">Lighting, fittings &amp; electrical accessories</li><li data-t="partsAppliance">Appliance spares &amp; replacement parts</li></ul>
-  </section>
-
-  <section class="wrap section enquiry" id="enquiry" aria-labelledby="enquiry-title">
-    <div class="enquiry-copy"><p class="kicker" data-t="enquiryIndex">03 / GET IN TOUCH</p><h2 id="enquiry-title" data-t="enquiryTitle">Tell us what you need.</h2><p data-t="enquiryIntro">Choose a service and tell us a little about the job. You can call the team or open an email draft to send.</p>
-      <p class="consultation-note" data-t="consultationNote">Enquiring is free. If you decide to book after speaking with us, the consultation charge is ₹149 and is non-refundable.</p>
-    </div>
-    <div class="enquiry-form">
-      <label for="enquiryService" data-t="selectService">Choose a service</label>
-      <select id="enquiryService"><option value="fab" data-t="fabTitle">Fabrication &amp; Welding</option><option value="elec" data-t="elecTitle">Electrical &amp; Supplies</option><option value="tech" data-t="techTitle">Technology Support</option></select>
-      <label for="enquiryDetails" data-t="detailsLabel">What do you need? (optional)</label>
-      <textarea id="enquiryDetails" rows="4" maxlength="600"></textarea>
-      <div class="enquiry-actions">
-        <a id="enquiryPhone" class="button button-dark" hidden><span data-t="call">Call Now</span><span aria-hidden="true">↗</span></a>
-        <a id="enquiryEmail" class="button button-outline" hidden><span data-t="emailEnquiry">Open email draft</span><span aria-hidden="true">↗</span></a>
-      </div>
-      <p class="fine" id="enquiryNumber" hidden></p>
-      <p class="fine" id="enquiryUnavailable" data-t="contactPending" hidden>Contact details coming soon.</p>
     </div>
   </section>
   <dialog class="modal" id="bookingModal" aria-labelledby="modalTitle">
       <button class="modal-close" id="closeModal" type="button" aria-label="Close">×</button>
-      <div class="eyebrow" data-t="bookingEyebrow">AFTER SPEAKING WITH US</div>
       <h2 id="modalTitle" data-t="bookingTitle">Consultation Booking</h2>
-      <p class="small" data-t="formIntro">Enter your name to continue.</p>
       <label for="customerName" data-t="nameLabel">Your Name</label>
       <input id="customerName" type="text" maxlength="60" autocomplete="name" placeholder="Enter your name">
       <div class="selected"><span data-t="selectedService">Selected service</span><strong id="selectedName">Fabrication &amp; Welding</strong></div>
@@ -137,12 +91,6 @@
       <div class="status" id="status" role="status" hidden></div>
   </dialog>
 </main>
-<footer class="site-footer">
-  <div class="wrap footer-row">
-    <a class="brand" href="#top" aria-label="H Company home"><span class="brand-mark" aria-hidden="true">H<span>.</span></span><span>H COMPANY</span></a>
-    <a href="#services" data-t="navServices">Services</a>
-    <a href="#enquiry" data-t="startEnquiry">Start an enquiry</a>
-  </div>
-</footer>
+<footer class="site-footer"><div class="wrap footer-row"><a class="brand footer-brand" href="#top" aria-label="H Company home"><span class="brand-name">H <span>Company</span></span></a></div></footer>
 </body>
 </html>
